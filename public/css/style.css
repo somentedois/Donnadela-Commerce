@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+:root{
+    --cor-fundo : rgb(212, 195, 111);
+    --cor-sombra : rgb(88, 74, 31);
+    --cor-primaria : rgb(255, 255, 255);
+    --cor--efeito : rgb(125, 237, 236);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--cor-fundo);
+    font-family: 'Roboto', sans-serif;
+}
+
+#logo {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: left;
+}
+
+header input {
+    font-size: 1.0rem;
+    padding: 0 20px;
+}
+
+.btBuscar {
+    width: 100px;
+    font-size: 1.0rem;
+    display: flex;
+}
+
+header {
+    background-color: var(--cor-primaria);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    height: 80px;
+}
+
+header a {
+    text-decoration: none;
+}
+
+.dp-menu-produtos ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+
+.dp-menu-produtos ul li{
+    display: inline;
+    position: relative;
+}
+
+.dp-menu-produtos ul li a {
+    color: black;
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px;
+}
+
+.dp-menu-produtos ul li a:hover {
+    background-color: var(--cor-fundo);
+}
+
+/*sub menu produtos*/
+.dp-menu-produtos ul ul{
+    display: none;
+    left: 0;
+    position: absolute;
+}
+
+.dp-menu-produtos ul li:hover ul{
+    display: block;
+}
+
+.dp-menu-produtos ul ul {
+    width: 150px;
+}
+
+.dp-menu-produtos ul ul li a {
+    display: block;
+}
+
+
+/*CONTA*/
+
+
+.dp-menu-conta ul {
+    list-style-type: none;
+    padding: 0;
+
+}
+
+.dp-menu-conta ul li{
+    display: inline;
+    position: relative;
+}
+
+.dp-menu-conta ul li a {
+    color: black;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0;
+}
+
+.dp-menu-conta ul li a:hover {
+    background-color: var(--cor-fundo);
+}
+
+/*sub menu produtos*/
+.dp-menu-conta ul ul{
+    display: none;
+    left: 0;
+    position: absolute;
+}
+
+.dp-menu-conta ul li:hover ul{
+    display: block;
+}
+
+.dp-menu-conta ul ul {
+    width: 150px;
+}
+
+.dp-menu-conta ul ul li a {
+    display: block;
+}
