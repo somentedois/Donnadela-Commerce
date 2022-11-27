@@ -1,136 +1,90 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
-
-:root{
-    --cor-fundo : rgb(212, 195, 111);
-    --cor-sombra : rgb(88, 74, 31);
-    --cor-primaria : rgb(255, 255, 255);
-    --cor--efeito : rgb(125, 237, 236);
-}
-
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: sans-serif;
 }
 
-body{
-    background-color: var(--cor-fundo);
-    font-family: 'Roboto', sans-serif;
+.header  a{
+text-decoration: none;
 }
 
-#logo {
-    width: 100px;
-    height: 100px;
-    display: flex;
-    justify-content: left;
-}
-
-header input {
-    font-size: 1.0rem;
-    padding: 0 20px;
-}
-
-.btBuscar {
-    width: 100px;
-    font-size: 1.0rem;
-    display: flex;
-}
-
-header {
-    background-color: var(--cor-primaria);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 20px;
-    height: 80px;
-}
-
-header a {
-    text-decoration: none;
-}
-
-.dp-menu-produtos ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-
-.dp-menu-produtos ul li{
-    display: inline;
-    position: relative;
-}
-
-.dp-menu-produtos ul li a {
-    color: black;
-    text-decoration: none;
-    display: inline-block;
-    padding: 10px;
-}
-
-.dp-menu-produtos ul li a:hover {
-    background-color: var(--cor-fundo);
-}
-
-/*sub menu produtos*/
-.dp-menu-produtos ul ul{
-    display: none;
-    left: 0;
+.header a img {
     position: absolute;
+    max-width: 115px; /*Ajusta o tamanho da Logo*/
+    margin-top: -15px; /*Ajusta a altura do Logo*/
+    margin-left: -280px; /*Ajusta a Logo para os lados*/
 }
 
-.dp-menu-produtos ul li:hover ul{
-    display: block;
+body {
+    background-color: rgb(204, 180, 113); /* Cor do Fundo da Página*/
 }
 
-.dp-menu-produtos ul ul {
+.header {
+    background-color: #fff; /*Cor do Fundo do Header*/
+    text-align: center;
+}
+
+.header ul {
+    display: inline-flex;
+    list-style: none;
+}
+
+.header ul li {
     width: 150px;
+    margin: 15px;
+    padding: 15px;
 }
 
-.dp-menu-produtos ul ul li a {
-    display: block;
-}
-
-
-/*CONTA*/
-
-
-.dp-menu-conta ul {
-    list-style-type: none;
-    padding: 0;
-
-}
-
-.dp-menu-conta ul li{
-    display: inline;
-    position: relative;
-}
-
-.dp-menu-conta ul li a {
-    color: black;
+.header ul li a {
     text-decoration: none;
-    display: inline-block;
-    padding: 0;
+    color: rgb(96, 80, 48); /*Cor das letras do Header*/
+    font-size: larger;
 }
 
-.dp-menu-conta ul li a:hover {
-    background-color: var(--cor-fundo);
-}
-
-/*sub menu produtos*/
-.dp-menu-conta ul ul{
-    display: none;
-    left: 0;
-    position: absolute;
-}
-
-.dp-menu-conta ul li:hover ul{
-    display: block;
-}
-
-.dp-menu-conta ul ul {
+.header ul li:hover {
     width: 150px;
+    text-align: center;
+    border-radius: 10px;
+    transition: 0.7s;
+    background-color: rgb(204, 180, 113);
 }
 
-.dp-menu-conta ul ul li a {
+.sub-menu-1 {
+    display: none;
+}
+
+.header ul li:hover .sub-menu-1{
     display: block;
+    position: absolute;
+    background-color: #fff; /*Cor do sub-menu*/
+    margin-top: 15px;
+    margin-left: -32px; /*Ajusta a caixa de opções para o lado*/
+}
+
+.header ul li:hover .sub-menu-1 ul{
+    display: block;
+}
+
+.header ul li:hover .sub-menu-1 ul li{
+    width: 150px;
+    text-align: center;
+    border-radius: 10px;
+    transition: 0.7s;
+}
+
+.header ul li:hover .sub-menu-1 ul li:hover {
+    background-color: rgb(204, 180, 113); /*Cor da caixinha de seleção*/
+}
+
+.sub-menu-2 {
+    display: none;
+}
+
+.hover-sub:hover .sub-menu-2{
+    display: block;
+    position: absolute;
+    margin-top: -40px;
+    margin-left: 140px;
+    background-color: #fff;
 }
