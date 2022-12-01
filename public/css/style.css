@@ -88,3 +88,88 @@ body {
     margin-left: 140px;
     background-color: #fff;
 }
+
+
+footer {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    background: #fff;
+}
+
+.container-footer {
+    max-width: 1400px;
+    padding: 0 4%;
+    margin: 5px;
+    margin-left: 300px;
+}
+
+.row-footer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-col {
+    width: 25%;
+    padding: 0 15px;
+}
+
+.footer-col h4 {
+    font-size: 20px;
+    color: rgb(96, 80, 48);
+    margin-bottom: 20px;
+    font-weight: 500;
+    position: relative;
+    
+}
+
+.footer-col ul {
+    list-style: none;  
+}
+
+.footer-col ul li {
+    margin: 10px 0;
+}
+
+.footer-col ul li a {
+    font-size: 16px;
+    text-transform: capitalize;
+    color: rgb(204, 180, 113);
+    text-decoration: none;
+    font-weight: 300;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: rgb(96, 80, 48);
+    padding-left: 10px;
+}
+
+.footer-col .medias-sociais{
+    margin-top: 30px;
+}
+
+.footer-col .medias-sociais a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    margin: 0 10px 10px 0;
+    text-decoration: none;
+    border-radius: 50%;
+    color: rgb(204, 180, 113);
+    border: 1px solid rgb(204, 180, 113);
+    transition: all 0.5s ease;
+}
+
+.footer-col .medias-sociais a i {
+    font-size: 20px;
+}
+
+.footer-col .medias-sociais a:hover {
+    color: #fff;
+    background-color: rgb(96, 80, 48);
+
+}
