@@ -20,7 +20,11 @@ servidor.get('/', (req,res)=>{
 
 servidor.get('/carrinho', (req,res)=>{
    return res.sendFile(__dirname + "/views/carrinho.html");
-})
+});
+
+servidor.get('/cadastro', (req,res)=>{
+    return res.sendFile(__dirname + "/views/cadastro.html");
+ });
 
 
 
