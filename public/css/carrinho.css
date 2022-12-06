@@ -1,3 +1,47 @@
+* {
+    box-sizing: border-box;
+}
 #piercing-carrinho {
     max-width: 80px;
+    margin: 0px 10px 0px 0px;
+}
+.bloco-do-carrinho {
+    display:flex;
+    
+    background-color: rgb(242, 242, 242);
+    padding: 10px 10px 10px ;
+    margin: 20px 100px 0px;
+}
+button {
+    background-color: rgb(192, 192, 192);
+    padding: 5px 20px;
+}
+.bloco-do-carrinho #produtos-bloco-do-carrinho {
+    padding: 3px 500px 3px 5px;
+}
+.bloco-do-carrinho .titulos-bloco-do-carrinho {
+    padding: 3px 60px;
+}
+#produto-do-carrinho {
+    display: flex;
+    background-color: white;
+    padding: 10px 10px 10px ;
+    margin: 0px 100px;
+}
+#piercing-produto-do-carrinho {
+    margin: 25px 450px 0px 0px;
+}
+.informacoes-produto-do-carrinho {
+    margin-top: 25px;
+    margin-right: 535px;
+}
+#final-compra-carrinho {
+    display: flex;
+    background-color: rgb(242, 242, 242);
+    padding: 10px 10px 10px ;
+    margin: 0px 100px 0px; 
+}
+#continuar-comprando-final-compra-carrinho {
+    margin-left: 950px;
+    margin-right: 20px;
 }

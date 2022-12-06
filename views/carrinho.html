@@ -95,14 +95,24 @@
         </ul>
     </nav></header>
 
-    <h1>Meu Carrinho</h1>
-    <h2>Itens</h2>
-    <main>
-        <article>
+    <nav class="bloco-do-carrinho">
+        <h5 id="produtos-bloco-do-carrinho">Produtos</h5>
+        <h5 class="titulos-bloco-do-carrinho">Preço unitário</h5>
+        <h5 class="titulos-bloco-do-carrinho">Quantidade</h5>
+        <h5 class="titulos-bloco-do-carrinho">Subtotal</h5>
+        <h5 class="titulos-bloco-do-carrinho">excluir</h5>
+    </nav>
+    
+    <article id="produto-do-carrinho">
             <img id="piercing-carrinho" src="/img/piercing.jpg" alt="Piercing">
-            <h2>Piercing</h2>
-            <span>R$ 65,50</span>
-        </article>
+            <h2 id="piercing-produto-do-carrinho">Piercing</h2>
+            <span class="informacoes-produto-do-carrinho">R$ 65,50</span>
+            <a href="#" class="informacoes-produto-do-carrinho"><img style="height: 20px ; width: 20px;" src="/img/126468.png" alt="Remove Item"></a>
+    </article>
+    <main id="final-compra-carrinho">
+        <button id="continuar-comprando-final-compra-carrinho">Continuar Comprando</button>
+        <button class="botoes-final-compra-carrinho">Finalizar Compra</button>
+
     </main>
 </body>
 </html>
