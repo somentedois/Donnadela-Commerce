@@ -38,6 +38,10 @@ servidor.get('/checkout-endereco', (req,res)=>{
    return res.sendFile(__dirname + "/views/checkout-endereco.html");
 });
 
+servidor.get('/checkout-pagamento', (req,res)=>{
+   return res.sendFile(__dirname + "/views/checkout-pagamento.html");
+});
+
 
 
 // 4 - Por o servidor no modo "aguardando requisições"
