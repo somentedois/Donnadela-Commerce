@@ -13,7 +13,7 @@ text-decoration: none;
     position: absolute;
     max-width: 115px; /*Ajusta o tamanho da Logo*/
     margin-top: -15px; /*Ajusta a altura do Logo*/
-    margin-left: -280px; /*Ajusta a Logo para os lados*/
+    margin-left: -80px; /*Ajusta a Logo para os lados*/
 }
 
 body {
@@ -172,4 +172,46 @@ footer {
     color: #fff;
     background-color: rgb(96, 80, 48);
 
+}
+
+body #bt-buscar {
+    width: 10%;
+    height: 25px;
+    background-color: white;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    margin-top: 15px;
+    color: rgb(96, 80, 48);
+    font-size: 20px;
+}
+
+body #bt-buscar:hover{
+    color: rgb(96, 80, 48);
+    background-color: rgb(204, 180, 113);
+    transition: all 0.5s ease;
+}
+
+body input{
+    width: 20%;
+    height: 15px;
+    color: rgb(96, 80, 48);
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid rgb(96, 80, 48);
+    padding: 10px;
+    font-size: 15px;
+    transition: all 0.4s ease;
+}
+
+body input:focus{
+    color: rgb(204, 180, 113);
+}
+
+body span{
+    color: rgb(96, 80, 48);
+    background-color:rgb(204, 180, 113);
+    border-radius: 20%;
+    padding: 10px 15px;
+    margin-left: 50px;
 }
