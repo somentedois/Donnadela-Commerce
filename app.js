@@ -26,13 +26,27 @@ servidor.get('/cadastro', (req,res)=>{
     return res.sendFile(__dirname + "/views/cadastro.html");
  });
 
- servidor.get('/login', (req,res)=>{
+servidor.get('/login', (req,res)=>{
     return res.sendFile(__dirname + "/views/login.html");
- })
+ });
 
- servidor.get('/pagina-do-produto', (req,res)=>{
+servidor.get('/pagina-do-produto', (req,res)=>{
    return res.sendFile(__dirname + "/views/pagina-produtos.html");
-})
+});
+
+servidor.get('/checkout-endereco', (req,res)=>{
+   return res.sendFile(__dirname + "/views/checkout-endereco.html");
+});
+
+servidor.get('/checkout-pagamento', (req,res)=>{
+   return res.sendFile(__dirname + "/views/checkout-pagamento.html");
+});
+
+servidor.get('/finalizar-pagamento', (req,res)=>{
+   return res.sendFile(__dirname + "/views/finalizar-pagamento.html");
+});
+
+
 
 
 
