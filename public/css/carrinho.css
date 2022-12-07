@@ -1,47 +1,81 @@
 * {
+    margin: 0px;
+    padding: 0px;
     box-sizing: border-box;
-}
-#piercing-carrinho {
-    max-width: 80px;
-    margin: 0px 10px 0px 0px;
+
 }
 .bloco-do-carrinho {
-    display:flex;
-    
-    background-color: rgb(242, 242, 242);
-    padding: 10px 10px 10px ;
-    margin: 20px 100px 0px;
+    display:flex; 
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.4);
+    padding: 10px 10px 10px 10px ;
+    margin: 20px 100px 0px;  
+}
+.titulos-bloco-do-carrinho {
+    display: flex;
+    align-items: center;
+    padding-left: 75px;
+    padding-right: 125px ;
+}
+.segunda-coluna img {
+    max-width: 80px;
+    margin-left: 40px;
+    margin-top: 5px;
+}
+
+.segunda-coluna {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 8px 10px 10px 10px ;
+    margin: 0px 100px 0px;  
+}
+
+.preco-segunda-coluna {
+    margin-left: 150px;
+}
+
+.qtd-segunda-coluna {
+    margin-left: 235px;
+}
+
+.sub-segunda-coluna {
+    margin-left: 197px;
+}
+
+.lixeira {
+    margin-left: 138px;
+}
+
+.lixeira img {
+    max-width: 30px;
+}
+
+.terceira-coluna {
+    display: flex;
+    align-items: flex-end;
+    padding: 150px 10px 10px 10px ;
+    margin: 0px 100px 0px; 
+    background-color: rgba(255, 255, 255, 0.4);
+}
+.terceira-coluna h2 {
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
 }
 button {
-    background-color: rgb(192, 192, 192);
-    padding: 5px 20px;
-}
-.bloco-do-carrinho #produtos-bloco-do-carrinho {
-    padding: 3px 500px 3px 5px;
-}
-.bloco-do-carrinho .titulos-bloco-do-carrinho {
-    padding: 3px 60px;
-}
-#produto-do-carrinho {
+    
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    background-color:rgb(224, 209, 168);
+    padding: 10px 30px;
+    border-radius: 10%;
     display: flex;
-    background-color: white;
-    padding: 10px 10px 10px ;
-    margin: 0px 100px;
+    width: fit-content;
+    gap: 10px;
+    font-weight: 700;
+    
 }
-#piercing-produto-do-carrinho {
-    margin: 25px 450px 0px 0px;
-}
-.informacoes-produto-do-carrinho {
-    margin-top: 25px;
-    margin-right: 535px;
-}
-#final-compra-carrinho {
-    display: flex;
-    background-color: rgb(242, 242, 242);
-    padding: 10px 10px 10px ;
-    margin: 0px 100px 0px; 
-}
-#continuar-comprando-final-compra-carrinho {
-    margin-left: 950px;
-    margin-right: 20px;
-}
+

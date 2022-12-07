@@ -1,0 +1,45 @@
+* {
+    box-sizing: border-box;
+}
+.bloco-do-carrinho {
+    display:flex; 
+    background-color: rgb(242, 242, 242);
+    padding: 10px 10px 10px ;
+    margin: 20px 100px 0px;
+}
+button {
+    background-color: rgb(192, 192, 192);
+    padding: 5px 20px;
+    border-radius: 10px;
+    font-weight: 700;
+}
+
+.bloco-do-carrinho .titulos-bloco-do-carrinho {
+    padding: 2px 90px;
+    
+}
+.produto-do-carrinho {
+    display: flex;
+    align-items: center;
+    background-color: white;
+   
+    margin: 0px 100px;
+}
+
+.produto-do-carrinho img {
+    max-width: 80px;
+}
+
+
+#final-compra-carrinho {
+    display: flex;
+    background-color: rgb(242, 242, 242);
+    padding: 10px 10px 10px ;
+    margin: 0px 100px 0px; 
+    
+}
+#continuar-comprando-final-compra-carrinho {
+    margin-left: 950px;
+    margin-right: 20px;
+    
+}
