@@ -209,9 +209,12 @@ body input:focus{
 }
 
 body span{
-    color: rgb(96, 80, 48);
-    background-color:rgb(204, 180, 113);
     border-radius: 20%;
     padding: 10px 15px;
     margin-left: 50px;
+}
+
+body #carrinho-header img {
+    padding: 30px 30px;
+    margin-left: 4px;
 }
