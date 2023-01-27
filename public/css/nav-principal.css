@@ -1,0 +1,79 @@
+#nav-principal {
+    background-color: #fff; /*Cor do Fundo do Header*/
+    text-align: center;
+}
+
+#nav-principal  a{
+    text-decoration: none;
+}
+
+#nav-principal a img {
+    position: absolute;
+    max-width: 115px; /*Ajusta o tamanho da Logo*/
+    margin-top: -15px; /*Ajusta a altura do Logo*/
+    margin-left: -80px; /*Ajusta a Logo para os lados*/
+}
+
+#nav-principal ul {
+    display: inline-flex;
+    list-style: none;
+}
+
+#nav-principal ul li {
+    width: 150px;
+    margin: 15px;
+    padding: 15px;
+}
+
+#nav-principal ul li a {
+    text-decoration: none;
+    color: rgb(96, 80, 48); /*Cor das letras do Header*/
+    font-size: larger;
+}
+
+#nav-principal ul li:hover {
+    width: 150px;
+    text-align: center;
+    border-radius: 10px;
+    transition: 0.7s;
+    background-color: rgb(204, 180, 113);
+}
+
+#nav-principal ul li .sub-menu-1 {
+    display: none;
+}
+
+#nav-principal ul li:hover .sub-menu-1{
+    display: block;
+    position: absolute;
+    background-color: #fff; /*Cor do sub-menu*/
+    margin-top: 15px;
+    margin-left: -32px; /*Ajusta a caixa de opções para o lado*/
+}
+
+#nav-principal ul li:hover .sub-menu-1 ul{
+    display: block;
+}
+
+#nav-principal ul li:hover .sub-menu-1 ul li{
+    width: 150px;
+    text-align: center;
+    border-radius: 10px;
+    transition: 0.7s;
+}
+
+#nav-principal ul li:hover .sub-menu-1 ul li:hover {
+    background-color: rgb(204, 180, 113); /*Cor da caixinha de seleção*/
+}
+
+#nav-principal ul li .sub-menu-2 {
+    display: none;
+}
+
+#nav-principal ul li:hover .sub-menu-2{
+    display: block;
+    position: absolute;
+    margin-top: -40px;
+    margin-left: 140px;
+    background-color: #fff;
+}
