@@ -46,6 +46,17 @@ servidor.get('/finalizar-pagamento', (req,res)=>{
    return res.sendFile(__dirname + "/views/finalizar-pagamento.html");
 });
 
+servidor.get('/perfil-de-usuario', (req,res)=>{
+   return res.sendFile(__dirname + "/views/perfil-de-usuario.html");
+});
+
+servidor.get('/editar-perfil', (req,res)=>{
+   return res.sendFile(__dirname + "/views/editar-perfil.html");
+});
+
+servidor.get('/editar-endereco', (req,res)=>{
+   return res.sendFile(__dirname + "/views/editar-endereco.html");
+});
 
 
 

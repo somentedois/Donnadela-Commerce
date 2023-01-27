@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Endereço</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/editar-endereco.css">
+    <link rel="stylesheet" href="css/editar-perfil.css">
+    <link rel="stylesheet" href="css/perfil-de-usuario.css">
+</head>
+<body>
+    <!-- <nav class="header">
+        <a href="/">
+            <img id="logo" src="/img/Logo.png" alt="Logo da Marca">
+        </a>
+
+        <ul>
+            <li><a href="#">Piercing</a>
+                <div class="sub-menu-1">
+                    <ul>
+                        <li class="hover-sub"><a href="#">Orelha</a>    
+                            <div class="sub-menu-2">
+                                <ul>
+                                    <li><a href="#">Tragus</a></li>
+                                    <li><a href="#">Hélix</a></li>
+                                    <li><a href="#">Conch</a></li>
+                                    <li><a href="#">Lóbulo</a></li>
+                                    <li><a href="#">Mini</a></li>
+                                    <li><a href="#">Scapha</a></li>
+                                    <li><a href="#">Daith</a></li>
+                                    <li><a href="#">Rook</a></li>
+                                </ul>
+                            </div>
+
+                        </li>
+
+                        <li class="hover-sub"><a href="#">Boca</a>
+                            <div class="sub-menu-2">
+                                <ul>
+                                    <li><a href="#">Labret</a></li>
+                                    <li><a href="#">Vertical Labret</a></li>
+                                    <li><a href="#">Monroe / Madonna</a></li>
+                                    <li><a href="#">Medusa</a></li>
+                                    <li><a href="#">Lingua</a></li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="hover-sub"><a href="#">Nariz</a>
+                            <div class="sub-menu-2">
+                                <ul>
+                                    <li><a href="#">Aba Nasal</a></li>
+                                    <li><a href="#">Septo</a></li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li><a href="#">Sombrancelha</a></li>
+
+                        <li><a href="#">Umbigo</a></li>
+
+                        <li class="hover-sub"><a href="#">Mamilo</a>
+                            <div class="sub-menu-2">
+                                <ul>
+                                    <li><a href="#">Feminino</a></li>
+                                    <li><a href="#">Masculino</a></li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="hover-sub"><a href="#">Íntimos</a>
+                            <div class="sub-menu-2">
+                                <ul>
+                                    <li><a href="#">Vertical Hood</a></li>
+                                    <li><a href="#">Horinzontal Hood</a></li>
+                                    <li><a href="#">Cristina</a></li>
+                                </ul>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+            </li>
+            <li><a href="#">Vale Presente</a></li>
+            <li><a href="#">Cuidados</a></li>
+            <li><a href="#">Conta</a>
+                <div class="sub-menu-1">
+                    <ul>
+                        <li><a href="login">Login</a></li>
+                        <li><a href="cadastro">Cadastrar</a></li>
+
+                    </ul>
+                </div>            
+            </li>
+        </ul>
+
+        <input type="text" name="" id="" placeholder="O que você procura?">
+        <button id="bt-buscar">Buscar</button>
+
+        <a id="carrinho-header" href="/carrinho">
+            <img src="img/carrinho.png" alt="">
+        </a>
+    </nav> -->
+    <main>
+        <section class="address">
+            <h3>Endereços</h3>
+            <hr id="line-top">
+            <div id="addresses"> 
+                <p>Rua das Flores, 200. Santo André-SP. CEP 87489-020</p> 
+                <a href="#" id="signal">-</a>
+            </div>
+            <hr id="line">
+            <div id="addresses"> 
+                <p>Rua das Mercedes, 1800. Santo André-SP. CEP 85489-414</p> 
+                <a href="#" id="signal">+</a>
+            </div> 
+            <hr id="line">
+            <div id="addresses"> 
+                <p>Av. das Cores, 200. Santo André-SP. CEP 85459-878</p> 
+                <a href="#" id="signal">+</a>
+            </div>
+            <hr id="line">
+        </section>
+
+        <div class="box">
+            <div class="form-box">
+                <h2>Alterar/Adicionar Endereço</h2>
+                <form action="#">
+                    <div  id="input-group">
+                        <label for="nome"></label>
+                        <input type="nome" id="nome" placeholder="Nome do Destinatário" required>
+                    </div>
+                    
+                    <div id="input-group">
+                        <label for="cep"></label>
+                        <input type="cep" id="cep" placeholder="Digite o CEP" required>
+                    </div>
+                    
+                    <div  id="input-group">
+                        <label for="endereco"></label>
+                        <input type="endereco" id="email" placeholder="Endereço" required>
+                        <label for="numero"></label>
+                        <input type="numero" id="numero" placeholder="Número" required>
+                    </div>
+
+                    <div id="input-group">
+                        <label for="complemento"></label>
+                        <input type="complemento" id="complemento" placeholder="Complemento. Ap, suíte etc (opcional)">
+                    </div>
+
+                    <div id="input-group">
+                        <label for="cidade"></label>
+                        <input type="cidade" id="cidade" placeholder="Cidade">
+                        <label for="estado"></label>
+                        <input type="estado" id="estado" placeholder="Estado">
+                    </div>
+
+                    <div id="input-group">
+                        <label for="observacoes"></label>
+                        <input type="observacoes" id="observacoes" placeholder="Observações">
+                    </div>
+    
+                    <div id="input-group">
+                        <button>Salvar Endereço</button>
+                    </div>
+    
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
