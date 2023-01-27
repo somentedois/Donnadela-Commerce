@@ -98,24 +98,6 @@ footer {
 
 }
 
-body #bt-buscar {
-    width: 10%;
-    height: 25px;
-    background-color: white;
-    border-radius: 20px;
-    outline: none;
-    border: none;
-    margin-top: 15px;
-    color: var(--cor-da-fonte);
-    font-size: 20px;
-}
-
-body #bt-buscar:hover{
-    color: var(--cor-da-fonte);
-    background-color: var(--cor-do-fundo);
-    transition: all 0.5s ease;
-}
-
 main input{
     width: 20%;
     height: 15px;
