@@ -111,7 +111,7 @@ body #bt-buscar:hover{
     transition: all 0.5s ease;
 }
 
-body input{
+main input{
     width: 20%;
     height: 15px;
     color: rgb(96, 80, 48);
@@ -123,7 +123,7 @@ body input{
     transition: all 0.4s ease;
 }
 
-body input:focus{
+main input:focus{
     color: rgb(204, 180, 113);
 }
 
