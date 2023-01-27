@@ -49,13 +49,14 @@
     display: none;
     position: absolute;
     top: 46px;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+    border-left: 1px solid var(--cor-do-fundo);
 }
 
 #nav-principal > ul > li > ul > li {
     position: relative;
     width: 100%;
     background-color: #FFF;
-    box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
 }
 
 #nav-principal > ul > li > ul > li:hover > ul {
@@ -68,7 +69,9 @@
     left: 150px;
     top: 0;
     background-color:#FFF;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
     z-index: 1;
+    border-left: 1px solid var(--cor-do-fundo);
 }
 
 #nav-principal > ul > li > ul > li > ul > li > a {
