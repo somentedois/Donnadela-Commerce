@@ -16,49 +16,79 @@
     display: block;
 }
 
-#nav-principal ul {
+#nav-principal > ul {
     display: flex;
     list-style: none;
     gap: 16px;
 }
 
-#nav-principal ul li {
+#nav-principal > ul li {
     display: inline-block;
+    position: relative;
 }
 
-#nav-principal ul li a {
+#nav-principal > ul li a {
     text-decoration: none;
     display: inline-block;
     color: var(--cor-da-fonte); /*Cor das letras do Header*/
     font-size: 1.2rem;
     padding: 12px 20px;
+    width: 100%;
 }
 
-#nav-principal ul li:hover {
-    width: 150px;
-    text-align: center;
-    border-radius: 10px;
+#nav-principal > ul li a:hover {
     transition: 0.7s;
     background-color: var(--cor-do-fundo);
 }
 
-#nav-principal ul li .sub-menu-1 {
-    display: none;
+#nav-principal > ul li:hover > ul{
+    display: block;
 }
 
+#nav-principal > ul > li > ul { /* menu de nível 1 */
+    display: none;
+    position: absolute;
+    top: 46px;
+}
+
+#nav-principal > ul > li > ul > li {
+    position: relative;
+    width: 100%;
+    background-color: #FFF;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+}
+
+#nav-principal > ul > li > ul > li:hover > ul {
+    display: block;
+}
+
+#nav-principal > ul > li > ul > li > ul { /* menu de nível 2 */
+    display: none;
+    position: absolute;
+    left: 150px;
+    top: 0;
+    background-color:#FFF;
+    z-index: 1;
+}
+
+#nav-principal > ul > li > ul > li > ul > li > a {
+    display: inline-block;
+    width: 100%;
+}
+/*
 #nav-principal ul li:hover .sub-menu-1{
     display: block;
     position: absolute;
-    background-color: #fff; /*Cor do sub-menu*/
+    background-color: #fff; /*Cor do sub-menu*
     margin-top: 15px;
-    margin-left: -32px; /*Ajusta a caixa de opções para o lado*/
+    margin-left: -32px; /*Ajusta a caixa de opções para o lado*
 }
 
 #nav-principal ul li:hover .sub-menu-1 ul{
     display: block;
 }
 
-#nav-principal ul li:hover .sub-menu-1 ul li{
+#nav-principal ul li:hover ul li{
     width: 150px;
     text-align: center;
     border-radius: 10px;
@@ -66,7 +96,7 @@
 }
 
 #nav-principal ul li:hover .sub-menu-1 ul li:hover {
-    background-color: var(--cor-do-fundo); /*Cor da caixinha de seleção*/
+    background-color: var(--cor-do-fundo); /*Cor da caixinha de seleção*
 }
 
 #nav-principal ul li .sub-menu-2 {
@@ -79,7 +109,7 @@
     margin-top: -40px;
     margin-left: 140px;
     background-color: #fff;
-}
+}*/
 
 #nav-principal input[type="search"]{
     font-size: 1.2rem;
