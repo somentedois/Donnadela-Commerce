@@ -27,7 +27,7 @@
 
 #nav-principal ul li a {
     text-decoration: none;
-    color: rgb(96, 80, 48); /*Cor das letras do Header*/
+    color: var(--cor-da-fonte); /*Cor das letras do Header*/
     font-size: larger;
 }
 
@@ -36,7 +36,7 @@
     text-align: center;
     border-radius: 10px;
     transition: 0.7s;
-    background-color: rgb(204, 180, 113);
+    background-color: var(--cor-do-fundo);
 }
 
 #nav-principal ul li .sub-menu-1 {
@@ -63,7 +63,7 @@
 }
 
 #nav-principal ul li:hover .sub-menu-1 ul li:hover {
-    background-color: rgb(204, 180, 113); /*Cor da caixinha de seleção*/
+    background-color: var(--cor-do-fundo); /*Cor da caixinha de seleção*/
 }
 
 #nav-principal ul li .sub-menu-2 {
