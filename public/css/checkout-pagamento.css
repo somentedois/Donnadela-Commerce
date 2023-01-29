@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Roboto:wght@300&display=swap');
-*{
+root {
+    --cor-do-fundo: rgb(204, 180, 113);
+    --cor-da-fonte: rgb(96, 80, 48);
+}
+
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -9,16 +14,28 @@
 body {
     background-color: var(--cor-do-fundo);
     display: block;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    min-height: 100vh;
+    width: 100%;
+    height: 100%;
+}
+
+body, html{
+    height: 85%;
 }
 
 .w50 {
     width: 50%;
     float: left;
-    padding-right: 15px; 
+    padding-right: 15px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
 }
 
 .box {
@@ -39,9 +56,12 @@ body {
     width: 50%;
     border-radius: 20px 20px 20px 20px;
     position: absolute;
-    max-width: 200px; /*Ajusta o tamanho da Logo*/
-    margin-top: -100px; /*Ajusta a altura do Logo*/
-    margin-left: 90px; /*Ajusta a Logo para os lados*/
+    max-width: 200px;
+    /*Ajusta o tamanho da Logo*/
+    margin-top: -100px;
+    /*Ajusta a altura do Logo*/
+    margin-left: 90px;
+    /*Ajusta a Logo para os lados*/
 }
 
 
@@ -57,22 +77,22 @@ body {
 }
 
 
-.form-box form{
+.form-box form {
     margin: 20px 0;
 }
 
-form .input-group{
+form .input-group {
     margin-bottom: 15px;
 }
 
-form .input-group label{
+form .input-group label {
     color: #3d3d3d;
     font-weight: bold;
     display: block;
     margin-bottom: 5px;
 }
 
-form .input-group input{
+form .input-group input {
     width: 100%;
     height: 47px;
     background-color: rgba(255, 255, 255, 0.32);
@@ -85,11 +105,11 @@ form .input-group input{
     transition: all 0.4s ease;
 }
 
-form .input-group input:focus{
+form .input-group input:focus {
     border-color: var(--cor-da-fonte);
 }
 
-form .input-group button{
+form .input-group button {
     width: 100%;
     height: 47px;
     background: var(--cor-da-fonte);
