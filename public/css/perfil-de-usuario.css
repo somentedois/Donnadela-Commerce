@@ -119,7 +119,6 @@ main section.address {
     width: 45vw;
     margin: 40px;
     gap: 10px;
-    /* background-color: blue; */
 }
 
 main div#addresses {
@@ -127,12 +126,12 @@ main div#addresses {
     justify-content: space-between;
 }
 
-main section.address p {
+main .address, .my-addresses p {
     font-size: 15px;
     margin: 5px;
 }
 
-main section.address a#signal {
+main .address a#signal, .my-addresses a#signal {
     font-size: 20px;
     font-style: oblique;
     text-decoration: none;

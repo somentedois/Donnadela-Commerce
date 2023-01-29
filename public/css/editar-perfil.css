@@ -9,7 +9,7 @@ main {
     align-items: center;
     justify-content: center;
     align-content: center;
-    padding: 20px;
+    padding: 10px;
 }
 
 main .box {
@@ -35,7 +35,6 @@ main .img-box {
 }
 
 .form-box {
-    backdrop-filter: blur(40px);
     width: 30vw;
     padding: 10px;
     border-radius: 20px;
@@ -50,11 +49,11 @@ main .img-box {
     color: #3d3d3d;
 }
 
-.form-box form{
+.form-box form {
     margin: 20px 0;
 }
 
-form #input-group{
+form #input-group {
     margin-bottom: 15px;
 }
 
@@ -65,7 +64,7 @@ form #input-group label{
     margin-bottom: 5px;
 }
 
-form #input-group input, select {
+form #nome, #email, #senha, #cep, #complemento, #observacoes {
     width: 100%;
     height: 47px;
     border-radius: 20px;
@@ -76,7 +75,7 @@ form #input-group input, select {
     transition: all 0.4s ease;
 }
 
-form #input-group input:focus{
+form #input-group input:focus {
     border-color: rgb(96, 80, 48);
 }
 
@@ -87,7 +86,6 @@ form #input-group button{
     border-radius: 20px;
     outline: none;
     border: none;
-    margin-top: 15px;
     font-size: 18px;
     font-weight: lighter;
     color: white;

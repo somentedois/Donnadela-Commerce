@@ -1,20 +1,53 @@
 main {
     display: flex;
     flex-direction: row;
-    gap: 10px;
     justify-content: space-between;
     align-items: flex-start;
     justify-items: center;
-
 }
 
-section.address {
-    width: 50%;
-}
-
-div.box {
-    width: 50%;
+main section.my-addresses {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 45vh;
+    width: 46vw;
+    margin: 40px;
+    gap: 10px;
+}
+
+main div .form-box-edit-address {
+    backdrop-filter: blur(40px);
+    width: 40vw;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+form .address-number, .city-state {
+    display: flex;
+    justify-content: space-between;
+}
+
+form #cidade, #endereco {
+    width: 70%;
+    margin-right: 3px;
+    height: 47px;
+    border-radius: 20px;
+    outline: none;
+    border: 2px solid transparent;
+    font-size: 15px;
+    color: #616161;
+    transition: all 0.4s ease;
+}
+
+form #estado, #numero {
+    width: 30%;
+    margin-right: 3px;
+    height: 47px;
+    border-radius: 20px;
+    outline: none;
+    border: 2px solid transparent;
+    font-size: 15px;
+    color: #616161;
+    transition: all 0.4s ease;
 }
