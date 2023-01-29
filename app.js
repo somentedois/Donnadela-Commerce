@@ -46,6 +46,10 @@ servidor.get('/finalizar-pagamento', (req,res)=>{
    return res.sendFile(__dirname + "/views/finalizar-pagamento.html");
 });
 
+servidor.get('/confirmacao-compra', (req,res)=>{
+   return res.sendFile(__dirname + "/views/confirmacao-compra.html");
+});
+
 
 
 
