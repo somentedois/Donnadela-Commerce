@@ -8,11 +8,9 @@
 
 body {
     background-color: var(--cor-do-fundo);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    min-height: 100vh;
+    display: block;
+    width: 100%;
+    height: 100%;
 }
 
 .w75 {
@@ -116,4 +114,15 @@ form .input-group button{
     border: none;
     margin-top: 15px;
     color: white;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    margin-top: 2%;
 }
