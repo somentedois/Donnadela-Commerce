@@ -223,15 +223,6 @@ body #carrinho-header img {
     max-width: 300px;
 }
 
-.produtos {
-    display: flex;
-    align-items:center;
-    padding: 10px;
-    gap: 5px;
-}
-
-.produto h2 {
-    
-    background-color: rgb(220, 220, 220);
-    padding: 10px 80px;
+.box {
+    border-radius: 20px;
 }

@@ -30,7 +30,7 @@ servidor.get('/login', (req,res)=>{
     return res.sendFile(__dirname + "/views/login.html");
  });
 
-servidor.get('/pagina-do-produto', (req,res)=>{
+servidor.get('/pagina-produtos', (req,res)=>{
    return res.sendFile(__dirname + "/views/pagina-produtos.html");
 });
 

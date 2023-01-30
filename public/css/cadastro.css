@@ -32,7 +32,7 @@ body {
     display: flex;
     align-items: center;
     padding: 20px;
-    border-radius: 20px 0 0 20px;
+    /* border-radius: 20px 0 0 20px; */
 }
 
 .img-box img {
@@ -49,7 +49,7 @@ body {
     background-color: rgba(255, 255, 255, 0.4);
     backdrop-filter: blur(40px);
     padding: 30px 40px;
-    border-radius: 0 20px 20px 0;
+    /* border-radius: 0 20px 20px 0; */
 }
 
 .form-box h2 {
