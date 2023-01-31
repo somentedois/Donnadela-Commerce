@@ -6,6 +6,30 @@ main {
     justify-items: center;
 }
 
+.w75 {
+    width: 75%;
+    float: left;
+    padding-right: 10px; 
+}
+
+.w25 {
+    width: 25%;
+    float: left;
+    padding-right: 5px; 
+}
+
+.w65 {
+    width: 65%;
+    float: left;
+    padding-right: 10px; 
+}
+
+.w35 {
+    width: 35%;
+    float: left;
+    padding-right: 10px; 
+}
+
 main section.my-addresses {
     display: flex;
     flex-direction: column;
@@ -21,6 +45,7 @@ main div .form-box-edit-address {
     width: 40vw;
     padding: 10px;
     border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.4);
 }
 
 form .address-number, .city-state {
@@ -28,9 +53,8 @@ form .address-number, .city-state {
     justify-content: space-between;
 }
 
-form #cidade, #endereco {
+/* form #cidade, #endereco {
     width: 70%;
-    margin-right: 3px;
     height: 47px;
     border-radius: 20px;
     outline: none;
@@ -38,11 +62,10 @@ form #cidade, #endereco {
     font-size: 15px;
     color: #616161;
     transition: all 0.4s ease;
-}
+} */
 
-form #estado, #numero {
+/* form #estado, #numero {
     width: 30%;
-    margin-right: 3px;
     height: 47px;
     border-radius: 20px;
     outline: none;
@@ -50,4 +73,6 @@ form #estado, #numero {
     font-size: 15px;
     color: #616161;
     transition: all 0.4s ease;
-}
+} */
+
+

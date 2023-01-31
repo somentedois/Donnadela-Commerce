@@ -14,12 +14,11 @@ main {
 
 main .box {
     display: flex;
-    align-items: center;
-    background-color: rgba(255, 255, 255, 0.5);
-    border-radius: 20px;
 }
 
 main .img-box {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 20px 0 0 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -37,7 +36,8 @@ main .img-box {
 .form-box {
     width: 30vw;
     padding: 10px;
-    border-radius: 20px;
+    border-radius: 0 20px 20px 0;
+    background-color: rgba(255, 255, 255, 0.4);
 }
 
 .form-box h2 {
@@ -64,13 +64,15 @@ form #input-group label{
     margin-bottom: 5px;
 }
 
-form #nome, #email, #senha, #cep, #complemento, #observacoes {
+form #nome, #email, #senha, #confirmarSenha, 
+#cep, #complemento, #observacoes, #endereco, #numero, #estado, #cidade, #bairro {
     width: 100%;
     height: 47px;
     border-radius: 20px;
     outline: none;
     border: 2px solid transparent;
     font-size: 15px;
+    background-color: rgba(255, 255, 255, 0.32);
     color: #616161;
     transition: all 0.4s ease;
 }
@@ -89,4 +91,5 @@ form #input-group button{
     font-size: 18px;
     font-weight: lighter;
     color: white;
+    cursor: pointer;
 }
