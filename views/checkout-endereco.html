@@ -111,13 +111,7 @@
                 <form action="#">
                     <div class="input-group">
                         <label for="cep">CEP</label>
-                        <input 
-                            type="text" 
-                            id="cep" 
-                            pattern="^[0-9]{5}-[0-9]{3}$" 
-                            required>
-                    <span class="error-msg">Preencha o CEP corretamente</span>
-
+                        <input type="text" id="cep" pattern="^[0-9]{5}-[0-9]{3}$" required>
                     </div>
 
                     <div class="input-group w75">
@@ -140,19 +134,19 @@
                         <input type="text" id="complemento" placeholder="">
                     </div>
 
-                    <form action="#">
-                        <div class="input-group w25">
-                            <label for="estado">Estado</label>
-                            <input name="text" id="estado" placeholder="" required>
-                        </div>
 
-                        <div class="input-group w75">
-                            <label for="cidade">Cidade</label>
-                            <input type="cidade" id="cidade" placeholder="" readonly>
-                        </div>,
-                        <div class="input-group">
-                            <button>Enviar</button>
-                        </div>
+                    <div class="input-group w25">
+                        <label for="estado">Estado</label>
+                        <input name="text" id="estado" placeholder="" readonly>
+                    </div>
+
+                    <div class="input-group w75">
+                        <label for="cidade">Cidade</label>
+                        <input type="cidade" id="cidade" placeholder="" readonly>
+                    </div>
+                    <div class="input-group">
+                        <button>Enviar</button>
+                    </div>
 
             </div>
 
