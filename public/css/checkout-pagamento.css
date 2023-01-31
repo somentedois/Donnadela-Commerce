@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Roboto:wght@300&display=swap');
+
 root {
     --cor-do-fundo: rgb(204, 180, 113);
     --cor-da-fonte: rgb(96, 80, 48);
@@ -18,7 +19,8 @@ body {
     height: 100%;
 }
 
-body, html{
+body,
+html {
     height: 85%;
 }
 
@@ -91,6 +93,32 @@ form .input-group label {
     display: block;
     margin-bottom: 5px;
 }
+
+form .input-group select {
+    height: 47px;
+    background-color: rgba(255, 255, 255, 0.32);
+    border-radius: 20px;
+    outline: none;
+    border: 2px solid transparent;
+    padding-right: 15%;
+    font-size: 15px;
+    text-align: center;
+    color: #616161;
+    transition: all 0.4s ease;
+}
+
+select #mes{
+    text-align: center;
+    justify-content: center;
+}
+
+.divisao{
+    display: flex;
+    justify-content: space-between;
+    gap: 5%;
+    text-align: center;
+}
+
 
 form .input-group input {
     width: 100%;
