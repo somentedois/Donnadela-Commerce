@@ -16,17 +16,20 @@ body {
 }
 
 footer {
+    padding: 10px;
     position: fixed;
     bottom: 0px;
     width: 100%;
-    background: #fff;
+    background: rgba(255, 255, 255, 0.904);
 }
 
 .container-footer {
-    max-width: 1400px;
-    padding: 0 4%;
-    margin: 5px;
-    margin-left: 300px;
+    align-items: center;
+    padding: 10px;
+    width: 1800px;
+    position: relative;
+    margin-left: 22%; /* linha modificada */
+    margin-right: 22%; /* linha adicionada */
 }
 
 .row-footer {
@@ -36,12 +39,12 @@ footer {
 
 .footer-col {
     width: 25%;
-    padding: 0 15px;
+    padding: 0 20px;
 }
 
 .footer-col h4 {
     font-size: 20px;
-    color: var(--cor-da-fonte);
+    color: black;
     margin-bottom: 20px;
     font-weight: 500;
     position: relative;
@@ -59,7 +62,7 @@ footer {
 .footer-col ul li a {
     font-size: 16px;
     text-transform: capitalize;
-    color: var(--cor-do-fundo);
+    color: rgb(96, 80, 48);
     text-decoration: none;
     font-weight: 300;
     display: block;
@@ -67,7 +70,7 @@ footer {
 }
 
 .footer-col ul li a:hover {
-    color: var(--cor-da-fonte);
+    color: rgb(96, 80, 48);
     padding-left: 10px;
 }
 

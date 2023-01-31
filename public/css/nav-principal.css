@@ -1,5 +1,5 @@
 #nav-principal {
-    background-color: #fff; /*Cor do Fundo do Header*/
+    background-color: rgba(255, 255, 255, 0.767); /*Cor do Fundo do Header*/
     display: flex;
     align-items: center;
     gap: 10px;
