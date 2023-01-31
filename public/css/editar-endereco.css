@@ -1,5 +1,62 @@
 
-form #estado, #numero {
+.w75 {
+    width: 75%;
+    float: left;
+    padding-right: 10px; 
+}
+
+.w25 {
+    width: 25%;
+    float: left;
+    padding-right: 5px; 
+}
+
+.w65 {
+    width: 65%;
+    float: left;
+    padding-right: 10px; 
+}
+
+.w35 {
+    width: 35%;
+    float: left;
+    padding-right: 10px; 
+}
+
+main section.my-addresses {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 45vh;
+    width: 46vw;
+    margin: 40px;
+    gap: 10px;
+}
+
+main div .form-box-edit-address {
+    width: 40vw;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+form .address-number, .city-state {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* form #cidade, #endereco {
+    width: 70%;
+    height: 47px;
+    border-radius: 20px;
+    outline: none;
+    border: 2px solid transparent;
+    font-size: 15px;
+    color: #616161;
+    transition: all 0.4s ease;
+} */
+
+/* form #estado, #numero {
     width: 30%;
     margin-right: 3px;
     height: 47px;
