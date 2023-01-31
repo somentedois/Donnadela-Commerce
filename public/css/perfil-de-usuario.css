@@ -12,11 +12,13 @@ main {
 main div.side1 {
     display: flex;
     flex-wrap: wrap;
+    padding: 40px 20px 20px;
 }
 
 main div.side2 {
     display: flex;
     flex-wrap: wrap;
+    padding: 40px 20px 20px;
 }
 
 main .title {
