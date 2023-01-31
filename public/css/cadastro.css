@@ -1,5 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Roboto:wght@300&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
 body {
-    background-color: var(--cor-do-fundo);
+    background-color: rgb(204, 180, 113);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -100,3 +108,15 @@ form .input-group button{
     margin-top: 15px;
     color: white;
 }
+
+main{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    margin-top: 2%;
+}
+

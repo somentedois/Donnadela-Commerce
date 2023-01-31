@@ -1,55 +1,94 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/cadastro.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/nav-principal.css">
+    <script src="js/cadastro.js" defer></script>
     <title>Cadastro</title>
 </head>
+
 <body>
     <div class="box">
         <div class="img-box">
           <a href="/">  <img id="logo-quadrado" src="/img/logo-quadrado.png"> </a>
         </div>
         
-        <div class="form-box"> 
+        <div class="form-box">
             <h2>Criar conta</h2>
             <p>Já tenho conta <a href="login"> Login </a></p>
 
-            <form action="#">
-                <div class="input-group">
-                    <label for="nome">Nome Completo</label>
-                    <input type="text" id="nome" placeholder="Digite o seu nome completo" required>
-                </div>
+                <form action="#">
+                    <div class="input-group">
+                        <label for="nome">Nome Completo</label>
+                        <input type="text" id="nome" placeholder="Digite o seu nome completo" required>
+                    </div>
 
-                <div class="input-group">
-                    <label for="email">E-mail</label>
-                    <input type="email" id="email" placeholder="Digite o seu e-mail" required>
-                </div>
+                    <div class="input-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" placeholder="Digite o seu e-mail" required>
+                    </div>
 
-                <div class="input-group">
-                    <label for="telefone">Telefone</label>
-                    <input type="telefone" id="telefone" placeholder="Digite o seu telefone" required>
-                </div>
+                    <div class="input-group">
+                        <label for="telefone">Telefone</label>
+                        <input type="telefone" id="telefone" placeholder="Digite o seu telefone" required>
+                    </div>
 
-                <div class="input-group w50">
-                    <label for="senha">Senha</label>
-                    <input type="password" id="senha" placeholder="Digite sua senha" required>
-                </div>
+                    <div class="input-group w50">
+                        <label for="senha">Senha</label>
+                        <input type="password" id="senha" placeholder="Digite sua senha" required>
+                    </div>
 
-                <div class="input-group w50">
-                    <label for="confirmarsenha">Confirmar senha</label>
-                    <input type="password" id="confirmarsenha" placeholder="Confirme sua senha" required>
-                </div>
+                    <div class="input-group w50">
+                        <label for="confirmarsenha">Confirmar senha</label>
+                        <input type="password" id="confirmarsenha" placeholder="Confirme sua senha" required>
+                    </div>
 
-                <div class="input-group">
-                    <button>Cadastrar</button>
-                </div>
+                    <div class="input-group">
+                        <button>Cadastrar</button>
+                    </div>
 
-            </form>
+                </form>
+            </div>
         </div>
-    </div>
+    </main>
+    <footer>
+        <div class="container-footer">
+            <div class="row-footer">
+                <!-- footer col-->
+                <div class="footer-col">
+                    <h4>Empresa</h4>
+                    <ul>
+                        <li> <a href="">Quem somos</a></li>
+                        <li> <a href="">Nossos Serviços</a></li>
+                    </ul>
+                </div>
+                <!-- end footer col-->
+                <!-- footer col-->
+                <div class="footer-col">
+                    <h4>Obter Ajuda</h4>
+                    <ul>
+                        <li> <a href="">SAQ</a></li>
+                        <li> <a href="">Opções de pagamento</a></li>
+                    </ul>
+                </div>
+                <!-- end footer col-->
+                <!-- footer col-->
+                <div class="footer-col">
+                    <h4>Siga-nos</h4>
+                    <div class="medias-sociais">
+                        <a href="https://www.instagram.com/donadella_fh/"> <i class="fa fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/donadella.fh"> <i class="fa fa-facebook"></i></a>
+                    </div>
+                </div>
+                <!-- end footer col-->
+            </div>
+        </div>
+    </footer>
 </body>
+
 </html>

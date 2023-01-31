@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>DonaDella</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/nav-principal.css">
@@ -11,99 +12,90 @@
     
 </head>
 <body>
-    <nav id="nav-principal">
+    <nav class="header">
         <a href="/">
             <img id="logo" src="/img/Logo.png" alt="Logo da Marca">
         </a>
 
         <ul>
-            <li><a href="#">Piercing</a>
-                <div class="sub-menu-1">
-                    <ul>
-                        <li class="hover-sub"><a href="#">Orelha</a>    
-                            <div class="sub-menu-2">
-                                <ul>
-                                    <li><a href="#">Tragus</a></li>
-                                    <li><a href="#">Hélix</a></li>
-                                    <li><a href="#">Conch</a></li>
-                                    <li><a href="#">Lóbulo</a></li>
-                                    <li><a href="#">Mini</a></li>
-                                    <li><a href="#">Scapha</a></li>
-                                    <li><a href="#">Daith</a></li>
-                                    <li><a href="#">Rook</a></li>
-                                </ul>
-                            </div>
+            <li>
+                <a href="#">Piercing</a>
+                <ul>
+                    <li>
+                        <a href="#">Orelha</a>    
+                        <ul>
+                            <li><a href="#">Tragus</a></li>
+                            <li><a href="#">Hélix</a></li>
+                            <li><a href="#">Conch</a></li>
+                            <li><a href="#">Lóbulo</a></li>
+                            <li><a href="#">Mini</a></li>
+                            <li><a href="#">Scapha</a></li>
+                            <li><a href="#">Daith</a></li>
+                            <li><a href="#">Rook</a></li>
+                        </ul>
+                    </li>
 
-                        </li>
+                    <li>
+                        <a href="#">Boca</a>
+                        <ul>
+                            <li><a href="#">Labret</a></li>
+                            <li><a href="#">Vertical Labret</a></li>
+                            <li><a href="#">Monroe / Madonna</a></li>
+                            <li><a href="#">Medusa</a></li>
+                            <li><a href="#">Lingua</a></li>
+                        </ul>
+                    </li>
 
-                        <li class="hover-sub"><a href="#">Boca</a>
-                            <div class="sub-menu-2">
-                                <ul>
-                                    <li><a href="#">Labret</a></li>
-                                    <li><a href="#">Vertical Labret</a></li>
-                                    <li><a href="#">Monroe / Madonna</a></li>
-                                    <li><a href="#">Medusa</a></li>
-                                    <li><a href="#">Lingua</a></li>
-                                </ul>
-                            </div>
-                        </li>
+                    <li>
+                        <a href="#">Nariz</a>
+                        <ul>
+                            <li><a href="#">Aba Nasal</a></li>
+                            <li><a href="#">Septo</a></li>
+                        </ul>
+                    </li>
 
-                        <li class="hover-sub"><a href="#">Nariz</a>
-                            <div class="sub-menu-2">
-                                <ul>
-                                    <li><a href="#">Aba Nasal</a></li>
-                                    <li><a href="#">Septo</a></li>
-                                </ul>
-                            </div>
-                        </li>
+                    <li><a href="#">Sombrancelha</a></li>
 
-                        <li><a href="#">Sombrancelha</a></li>
+                    <li><a href="#">Umbigo</a></li>
 
-                        <li><a href="#">Umbigo</a></li>
+                    <li><a href="#">Mamilo</a>
+                        <div class="sub-menu-2">
+                            <ul>
+                                <li><a href="#">Feminino</a></li>
+                                <li><a href="#">Masculino</a></li>
+                            </ul>
+                        </div>
+                    </li>
 
-                        <li class="hover-sub"><a href="#">Mamilo</a>
-                            <div class="sub-menu-2">
-                                <ul>
-                                    <li><a href="#">Feminino</a></li>
-                                    <li><a href="#">Masculino</a></li>
-                                </ul>
-                            </div>
-                        </li>
+                    <li><a href="#">Íntimos</a>
+                        <div class="sub-menu-2">
+                            <ul>
+                                <li><a href="#">Vertical Hood</a></li>
+                                <li><a href="#">Horinzontal Hood</a></li>
+                                <li><a href="#">Cristina</a></li>
+                            </ul>
+                        </div>
+                    </li>
 
-                        <li class="hover-sub"><a href="#">Íntimos</a>
-                            <div class="sub-menu-2">
-                                <ul>
-                                    <li><a href="#">Vertical Hood</a></li>
-                                    <li><a href="#">Horinzontal Hood</a></li>
-                                    <li><a href="#">Cristina</a></li>
-                                </ul>
-                            </div>
-                        </li>
-
-                    </ul>
-                </div>
+                </ul>
             </li>
             <li><a href="#">Vale Presente</a></li>
             <li><a href="#">Cuidados</a></li>
-            <li><a href="#">Conta</a>
-                <div class="sub-menu-1">
-                    <ul>
-                        <li><a href="login">Login</a></li>
-                        <li><a href="cadastro">Cadastrar</a></li>
-
-                    </ul>
-                </div>            
+            <li>
+                <a href="#">Conta</a>
+                <ul>
+                    <li><a href="login">Login</a></li>
+                    <li><a href="cadastro">Cadastrar</a></li>
+                </ul>
             </li>
         </ul>
 
-        <input type="text" name="" id="" placeholder="O que você procura?">
-        <button id="bt-buscar">Buscar</button>
+        <input type="search" name="busca" placeholder="O que você procura?">
+        <button class="bt-buscar">Buscar</button>
 
-        <a id="carrinho-header" href="/carrinho">
+        <a class="carrinho" href="/carrinho">
             <img src="img/carrinho.png" alt="">
-            <!-- <span>0</span> -->
         </a>
-
     </nav>
     <main>
         <section>

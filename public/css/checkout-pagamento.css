@@ -1,10 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Roboto:wght@300&display=swap');
-root {
-    --cor-do-fundo: rgb(204, 180, 113);
-    --cor-da-fonte: rgb(96, 80, 48);
-}
-
-* {
+*{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -12,14 +7,12 @@ root {
 }
 
 body {
-    background-color: var(--cor-do-fundo);
-    display: block;
-    width: 100%;
-    height: 100%;
-}
-
-body, html{
-    height: 85%;
+    background-color: rgb(204, 180, 113);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    min-height: 100vh;
 }
 
 .w50 {
@@ -92,7 +85,7 @@ form .input-group label {
     margin-bottom: 5px;
 }
 
-form .input-group input {
+form .input-group input{
     width: 100%;
     height: 47px;
     background-color: rgba(255, 255, 255, 0.32);
