@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/perfil-de-usuario.css">
     <link rel="stylesheet" href="css/nav-principal.css">
     <script src="js/checkout-endereco.js" defer></script>
+    <script src="js/checkout-endereco.js" defer></script>
     
 </head>
 <body>
@@ -132,12 +133,12 @@
                     
                     <div id="input-group">
                         <label for="cep">CEP</label>
-                        <input type="text" id="cep" placeholder="Digite o CEP" required>
+                        <input type="text" id="cep" placeholder="Digite o CEP" pattern="^[0-9]{5}-[0-9]{3}$" required>
                     </div>
                     
                     <div class="input-group w75" id="input-group">
                         <label for="endereco">Endereço</label>
-                        <input type="text" id="endereco" placeholder="" required>
+                        <input type="text" id="endereco" placeholder="" readonly>
                     </div>
     
                     <div class="input-group w25" id="input-group">
@@ -147,7 +148,7 @@
     
                     <div class="input-group w65" id="input-group">
                         <label for="bairro">Bairro</label>
-                        <input type="text" id="bairro" placeholder="" required>
+                        <input type="text" id="bairro" placeholder="" readonly>
                     </div>
 
                     <div class="input-group w35" id="input-group">
