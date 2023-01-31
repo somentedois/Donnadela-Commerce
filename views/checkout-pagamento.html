@@ -5,11 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Checkout de Pagamento</title>
     <link rel="stylesheet" href="css/checkout-pagamento.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/nav-principal.css">
-    <script defer src="/js/checkout-pagamento.js"></script>
-    <title>Checkout de Pagamento</title>
+    <script src="js/checkout-pagamento.js" defer></script>
 </head>
 
 <body>
@@ -109,8 +110,8 @@
 
                 <form action="#">
                     <div class="input-group">
-                        <label for="numero-cartao">Número do cartão</label>
-                        <input type="number" id="numero-cartao" placeholder="" required>
+                        <label for="numero-cartao">Digite o Número do cartão com 16 digitos</label>
+                        <input type="text" id="numero-cartao" placeholder="" pattern="^[0-9]{16}$" required>
                     </div>
 
                     <div class="input-group">
@@ -120,16 +121,41 @@
 
                     <div class="input-group w50">
                         <label for="validade-cartao">Validade do cartão</label>
-                        <input type="number" id="validade-cartao" placeholder="Digite o mês/ano" required>
+                        <div class="divisao">
+                            <select type="number" id="mês" placeholder="" required>
+                                <option value="1">Mês</option>
+                                <option value="2">1</option>
+                                <option value="3">2</option>
+                                <option value="4">3</option>
+                                <option value="5">4</option>
+                                <option value="6">5</option>
+                                <option value="7">6</option>
+                                <option value="8">7</option>
+                                <option value="9">8</option>
+                                <option value="10">9</option>
+                                <option value="11">10</option>
+                                <option value="12">11</option>
+                                <option value="13">12</option>
+                            </select>
+                            <select type="number" id="ano" placeholder="" required>
+                                <option value="1">Ano</option>
+                                <option value="2">2023</option>
+                                <option value="3">2024</option>
+                                <option value="4">2025</option>
+                                <option value="5">2026</option>
+                                <option value="6">2027</option>
+                                <option value="7">2028</option>
+                                <option value="8">2029</option>
+                                <option value="9">2030</option>
+                            </select>
+                        </div>
                     </div>
 
                     <div class="input-group w50">
                         <label for="codigo-seguranca">Código de Segurança</label>
-                        <input type="number" 
-                        id="codigo-seguranca" 
-                        placeholder="Digite o CVC" 
-                        pattern="^[0-3]{3}$"
-                        required>
+                        <input type="text" id="codigo-seguranca" placeholder="Digite o CVC" pattern="^[0-9]{3}$"
+                            required>
+                        </span>
                     </div>
 
                     <div class="input-group">
