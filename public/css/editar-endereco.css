@@ -41,7 +41,6 @@ main section.my-addresses {
 }
 
 main div .form-box-edit-address {
-    backdrop-filter: blur(40px);
     width: 40vw;
     padding: 10px;
     border-radius: 20px;
