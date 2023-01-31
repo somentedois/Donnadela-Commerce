@@ -1,17 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/checkout-endereco.css">
+    <title>Perfil</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/perfil-de-usuario.css">
     <link rel="stylesheet" href="css/nav-principal.css">
-    <title>Checkout-Endereço</title>
 </head>
 <body>
-<header>
-<nav id="nav-principal">
+    <nav id="nav-principal">
         <a class="logo" href="/">
             <img src="/img/Logo.png" alt="Logo da Marca">
         </a>
@@ -21,7 +20,7 @@
                 <a href="#">Piercing</a>
                 <ul>
                     <li>
-                        <a href="#">Orelha</a>
+                        <a href="#">Orelha</a>    
                         <ul>
                             <li><a href="#">Tragus</a></li>
                             <li><a href="#">Hélix</a></li>
@@ -95,92 +94,63 @@
         <a class="carrinho" href="/carrinho">
             <img src="img/carrinho.png" alt="">
         </a>
-</nav>
-</header>
+    </nav>
 
-<main>
-    <div class="box">
-        <div class="img-box">
-          <a href="/">  <img id="logo-quadrado" src="/img/logo-quadrado.png"> </a>
-        </div>
-        
-        <div class="form-box">
-            <h2>Informe o endereço para entrega:</h2>
-
-            <form action="#">
-                <div class="input-group">
-                    <label for="cep">CEP</label>
-                    <input type="text" id="cep" placeholder="" required>
-                </div>
-
-                <div class="input-group w75">
-                    <label for="endereco">Endereço</label>
-                    <input type="text" id="endereco" placeholder="" required>
-                </div>
-
-                <div class="input-group w25">
-                    <label for="numero">Número</label>
-                    <input type="number" id="numero" placeholder="" required>
-                </div>
-
-                <div class="input-group w65">
-                    <label for="bairro">Bairro</label>
-                    <input type="text" id="bairro" placeholder="" required>
-                </div>
-
-                <div class="input-group w35">
-                    <label for="complemento">Complemento</label>
-                    <input type="text" id="complemento" placeholder="">
-                </div>
-
-                <form action="#">
-                    <div class="input-group">
-                        <label for="estado-cidade">Estado / Cidade</label>
-                        <input type="text" id="estado-cidade" placeholder="" required>
-                    </div>
-
-                <div class="input-group">
-                    <button>Enviar</button>
-                </div>
-
-            </form>
-        </div>
-    </div>
-</main>
-
-<footer>
-    <div class="container-footer">
-        <div class="row-footer">
-            <!-- footer col-->
-            <div class="footer-col">
-                <h4>Empresa</h4>
-                <ul>
-                    <li> <a href="">Quem somos</a></li>
-                    <li> <a href="">Nossos Serviços</a></li>
-                </ul>
+    <main>
+        <div class="side1">
+            <h1 class="title">Perfil do Usuário</h1>
+        <section class="profile">
+            <img src="img/perfil-default.jpg" alt="">
+            <article class="client-info">
+                <h3>Ingrid dos Santos</h3>
+                <p>E-mail: ingrid@dossantos.com</p>
+                <p>Cliente desde abril de 2022</p>
+            </article>
+            <div class="links-profile">
+                <a href="editar-perfil">Editar</a>
             </div>
-            <!-- end footer col-->
-            <!-- footer col-->
-            <div class="footer-col">
-                <h4>Obter Ajuda</h4>
-                <ul>
-                    <li> <a href="">SAQ</a></li>
-                    <li> <a href="">Opções de pagamento</a></li>
-                </ul>
+        </section>
+        <hr class="line1">
+        <section class="orders">
+            <h3>Pedidos</h3>
+            <hr id="line-top">
+            <div id="orders-date"> 
+                <p>18/01/2023</p> 
+                <p>R$ 298,33</p>
             </div>
-            <!-- end footer col-->
-            <!-- footer col-->
-            <div class="footer-col">
-                <h4>Siga-nos</h4>
-                <div class="medias-sociais">
-                    <a href="https://www.instagram.com/donadella_fh/"> <i class="fa fa-instagram"></i></a>
-                    <a href="https://www.facebook.com/donadella.fh"> <i class="fa fa-facebook"></i></a>
-                </div>
+            <hr id="line">
+            <div id="orders-date"> 
+                <p>10/01/2023</p> 
+                <p>R$ 65,55</p>
             </div>
-            <!-- end footer col-->
+            <hr id="line">
+        </section>
         </div>
-    </div>
-</footer>
+        <div class="side2">
+            <section class="address">
+                <h3>Endereços</h3>
+                <hr id="line-top">
+                <div id="addresses"> 
+                    <p>Rua das Flores, 200. Santo André-SP. CEP 87489-020</p> 
+                    <a href="#" id="signal">-</a>
+                </div>
+                <hr id="line">
+                <div id="addresses"> 
+                    <p>Rua das Mercedes, 1800. Santo André-SP. CEP 85489-414</p> 
+                    <a href="#" id="signal">+</a>
+                </div> 
+                <hr id="line">
+                <div id="addresses"> 
+                    <p>Av. das Cores, 200. Santo André-SP. CEP 85459-878</p> 
+                    <a href="#" id="signal">+</a>
+                </div>
+                <hr id="line">
+                <div class="add-address">
+                    <a href="editar-endereco">Adicionar Endereço</a>
+                </div>
+            </section>
+        </div>
 
+    </main>
 </body>
 </html>

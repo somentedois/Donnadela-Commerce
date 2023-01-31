@@ -1,94 +1,19 @@
-*{
-    margin: 0;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Roboto:wght@300&display=swap');
+* {
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
-.header  a{
-text-decoration: none;
-}
-
-.header a img {
-    position: absolute;
-    max-width: 115px; /*Ajusta o tamanho da Logo*/
-    margin-top: -15px; /*Ajusta a altura do Logo*/
-    margin-left: -80px; /*Ajusta a Logo para os lados*/
+:root {
+    --cor-do-fundo: rgb(204, 180, 113);
+    --cor-da-fonte: rgb(96, 80, 48);
 }
 
 body {
-    background-color: rgb(204, 180, 113); /* Cor do Fundo da Página*/
+    background-color: var(--cor-do-fundo);
 }
-
-.header {
-    background-color: #fff; /*Cor do Fundo do Header*/
-    text-align: center;
-}
-
-.header ul {
-    display: inline-flex;
-    list-style: none;
-}
-
-.header ul li {
-    width: 150px;
-    margin: 15px;
-    padding: 15px;
-}
-
-.header ul li a {
-    text-decoration: none;
-    color: rgb(96, 80, 48); /*Cor das letras do Header*/
-    font-size: larger;
-}
-
-.header ul li:hover {
-    width: 150px;
-    text-align: center;
-    border-radius: 10px;
-    transition: 0.7s;
-    background-color: rgb(204, 180, 113);
-}
-
-.sub-menu-1 {
-    display: none;
-}
-
-.header ul li:hover .sub-menu-1{
-    display: block;
-    position: absolute;
-    background-color: #fff; /*Cor do sub-menu*/
-    margin-top: 15px;
-    margin-left: -32px; /*Ajusta a caixa de opções para o lado*/
-}
-
-.header ul li:hover .sub-menu-1 ul{
-    display: block;
-}
-
-.header ul li:hover .sub-menu-1 ul li{
-    width: 150px;
-    text-align: center;
-    border-radius: 10px;
-    transition: 0.7s;
-}
-
-.header ul li:hover .sub-menu-1 ul li:hover {
-    background-color: rgb(204, 180, 113); /*Cor da caixinha de seleção*/
-}
-
-.sub-menu-2 {
-    display: none;
-}
-
-.hover-sub:hover .sub-menu-2{
-    display: block;
-    position: absolute;
-    margin-top: -40px;
-    margin-left: 140px;
-    background-color: #fff;
-}
-
 
 footer {
     position: fixed;
@@ -116,7 +41,7 @@ footer {
 
 .footer-col h4 {
     font-size: 20px;
-    color: rgb(96, 80, 48);
+    color: var(--cor-da-fonte);
     margin-bottom: 20px;
     font-weight: 500;
     position: relative;
@@ -134,7 +59,7 @@ footer {
 .footer-col ul li a {
     font-size: 16px;
     text-transform: capitalize;
-    color: rgb(204, 180, 113);
+    color: var(--cor-do-fundo);
     text-decoration: none;
     font-weight: 300;
     display: block;
@@ -142,7 +67,7 @@ footer {
 }
 
 .footer-col ul li a:hover {
-    color: rgb(96, 80, 48);
+    color: var(--cor-da-fonte);
     padding-left: 10px;
 }
 
@@ -159,8 +84,8 @@ footer {
     margin: 0 10px 10px 0;
     text-decoration: none;
     border-radius: 50%;
-    color: rgb(204, 180, 113);
-    border: 1px solid rgb(204, 180, 113);
+    color: var(--cor-do-fundo);
+    border: 1px solid var(--cor-do-fundo);
     transition: all 0.5s ease;
 }
 
@@ -170,42 +95,24 @@ footer {
 
 .footer-col .medias-sociais a:hover {
     color: #fff;
-    background-color: rgb(96, 80, 48);
+    background-color: var(--cor-da-fonte);
 
 }
 
-body #bt-buscar {
-    width: 10%;
-    height: 25px;
-    background-color: white;
-    border-radius: 20px;
-    outline: none;
-    border: none;
-    margin-top: 15px;
-    color: rgb(96, 80, 48);
-    font-size: 20px;
-}
-
-body #bt-buscar:hover{
-    color: rgb(96, 80, 48);
-    background-color: rgb(204, 180, 113);
-    transition: all 0.5s ease;
-}
-
-body input{
+main input{
     width: 20%;
     height: 15px;
-    color: rgb(96, 80, 48);
+    color: var(--cor-da-fonte);
     border-radius: 10px;
     outline: none;
-    border: 1px solid rgb(96, 80, 48);
+    border: 1px solid var(--cor-da-fonte);
     padding: 10px;
     font-size: 15px;
     transition: all 0.4s ease;
 }
 
-body input:focus{
-    color: rgb(204, 180, 113);
+main input:focus{
+    color: var(--cor-do-fundo);
 }
 
 body span{

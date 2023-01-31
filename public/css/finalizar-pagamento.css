@@ -7,7 +7,7 @@
 }
 
 body {
-    background-color: rgb(204, 180, 113);
+    background-color: var(--cor-do-fundo);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -95,13 +95,13 @@ form .input-group input{
 }
 
 form .input-group input:focus{
-    border-color: rgb(96, 80, 48);
+    border-color: var(--cor-da-fonte);
 }
 
 form .input-group button{
     width: 100%;
     height: 47px;
-    background: rgb(96, 80, 48);
+    background: var(--cor-da-fonte);
     border-radius: 20px;
     outline: none;
     border: none;

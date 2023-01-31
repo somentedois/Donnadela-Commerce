@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Roboto:wght@300&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+main {
+    display: grid;
+	grid-template-columns: 50vw 50vw;
+}
+
+main div.side1 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main div.side2 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main .title {
+    margin: 20px 0 0 20px;
+    width: 40vw;
+}
+
+main section.profile {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    height: 20vh;
+    width: 47vw;
+    margin: 20px 0 15px 20px;
+    gap: 10px;
+}
+
+main section img {
+    border-radius: 10px;
+}
+
+main article.client-info {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+main article.client-info h3 {
+    font-size: 25px;
+}
+
+main article.client-info p {
+    font-size: 14px;
+}
+
+main section div.links-profile {
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    
+}
+
+main section div.links-profile a {
+    text-align: center;
+    color: #000;
+
+}
+
+main .line1 { 
+    width: 48vw; 
+    margin-left: 15px;
+    border: 1px ridge rgb(244, 233, 233);
+
+}
+
+main #line {
+    width: 100%;
+    text-align: left;
+    border: 1px ridge rgb(39, 38, 38);
+}
+
+main #line-top {
+    width: 100%;
+    text-align: left;
+    border: 1px ridge rgb(112, 109, 109);
+}
+
+main section.orders {
+    height: 20vh;
+    width: 40vw;
+    padding: 10px;
+    margin: 40px;
+    gap: 10px;
+}
+
+main section.orders h3 {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 30px;
+}
+
+main div#orders-date {
+    display: flex;
+    justify-content: space-between;
+}
+
+main section.orders p {
+    font-size: 18px;
+    line-height: 30px;
+    margin: 8px;
+}
+
+main section.address {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 20vh;
+    width: 45vw;
+    margin: 40px;
+    gap: 10px;
+}
+
+main div#addresses {
+    display: flex;
+    justify-content: space-between;
+}
+
+main .address, .my-addresses p {
+    font-size: 15px;
+    margin: 5px;
+}
+
+main .address a#signal, .my-addresses a#signal {
+    font-size: 20px;
+    font-style: oblique;
+    text-decoration: none;
+    color: #000;
+}
+
+main section div.add-address {
+    margin-left: auto;
+}
+
+main section div.add-address a {
+    color: #000;
+}

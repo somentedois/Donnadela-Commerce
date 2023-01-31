@@ -1,17 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/checkout-endereco.css">
+    <title>Editar Perfil</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/editar-perfil.css">
     <link rel="stylesheet" href="css/nav-principal.css">
-    <title>Checkout-Endereço</title>
 </head>
 <body>
-<header>
-<nav id="nav-principal">
+    <nav id="nav-principal">
         <a class="logo" href="/">
             <img src="/img/Logo.png" alt="Logo da Marca">
         </a>
@@ -21,7 +20,7 @@
                 <a href="#">Piercing</a>
                 <ul>
                     <li>
-                        <a href="#">Orelha</a>
+                        <a href="#">Orelha</a>    
                         <ul>
                             <li><a href="#">Tragus</a></li>
                             <li><a href="#">Hélix</a></li>
@@ -95,92 +94,44 @@
         <a class="carrinho" href="/carrinho">
             <img src="img/carrinho.png" alt="">
         </a>
-</nav>
-</header>
-
-<main>
-    <div class="box">
-        <div class="img-box">
-          <a href="/">  <img id="logo-quadrado" src="/img/logo-quadrado.png"> </a>
-        </div>
-        
-        <div class="form-box">
-            <h2>Informe o endereço para entrega:</h2>
-
-            <form action="#">
-                <div class="input-group">
-                    <label for="cep">CEP</label>
-                    <input type="text" id="cep" placeholder="" required>
-                </div>
-
-                <div class="input-group w75">
-                    <label for="endereco">Endereço</label>
-                    <input type="text" id="endereco" placeholder="" required>
-                </div>
-
-                <div class="input-group w25">
-                    <label for="numero">Número</label>
-                    <input type="number" id="numero" placeholder="" required>
-                </div>
-
-                <div class="input-group w65">
-                    <label for="bairro">Bairro</label>
-                    <input type="text" id="bairro" placeholder="" required>
-                </div>
-
-                <div class="input-group w35">
-                    <label for="complemento">Complemento</label>
-                    <input type="text" id="complemento" placeholder="">
-                </div>
-
+    </nav>
+    <main>
+        <div class="box">
+            <div class="img-box">
+                <a href="/"><img id="logo-quadrado" src="/img/logo-quadrado.png"></a>
+            </div>
+            
+            <div class="form-box">
+                <h2>Editar Perfil</h2>
                 <form action="#">
-                    <div class="input-group">
-                        <label for="estado-cidade">Estado / Cidade</label>
-                        <input type="text" id="estado-cidade" placeholder="" required>
+                    <div  id="input-group">
+                        <label for="nome">Nome</label>
+                        <input type="nome" id="nome" placeholder="Digite o seu nome" required>
+                    </div>
+                    
+                    <div  id="input-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" placeholder="Digite o seu e-mail" required>
                     </div>
 
-                <div class="input-group">
-                    <button>Enviar</button>
-                </div>
+                    <h3>Alterar Senha</h3>
+                    <div id="input-group">
+                        <label for="senha"></label>
+                        <input type="password" id="senha" placeholder="Digite nova senha" required>
+                    </div>
 
-            </form>
+                    <div id="input-group">
+                        <label for="senha"></label>
+                        <input type="password" id="senha" placeholder="Confirme senha" required>
+                    </div>
+    
+                    <div id="input-group">
+                        <button>Salvar</button>
+                    </div>
+    
+                </form>
+            </div>
         </div>
-    </div>
-</main>
-
-<footer>
-    <div class="container-footer">
-        <div class="row-footer">
-            <!-- footer col-->
-            <div class="footer-col">
-                <h4>Empresa</h4>
-                <ul>
-                    <li> <a href="">Quem somos</a></li>
-                    <li> <a href="">Nossos Serviços</a></li>
-                </ul>
-            </div>
-            <!-- end footer col-->
-            <!-- footer col-->
-            <div class="footer-col">
-                <h4>Obter Ajuda</h4>
-                <ul>
-                    <li> <a href="">SAQ</a></li>
-                    <li> <a href="">Opções de pagamento</a></li>
-                </ul>
-            </div>
-            <!-- end footer col-->
-            <!-- footer col-->
-            <div class="footer-col">
-                <h4>Siga-nos</h4>
-                <div class="medias-sociais">
-                    <a href="https://www.instagram.com/donadella_fh/"> <i class="fa fa-instagram"></i></a>
-                    <a href="https://www.facebook.com/donadella.fh"> <i class="fa fa-facebook"></i></a>
-                </div>
-            </div>
-            <!-- end footer col-->
-        </div>
-    </div>
-</footer>
-
+    </main>
 </body>
 </html>
