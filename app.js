@@ -62,6 +62,10 @@ servidor.get('/editar-endereco', (req,res)=>{
    return res.sendFile(__dirname + "/views/editar-endereco.html");
 });
 
+servidor.get('/pesquisa', (req,res)=>{
+   return res.sendFile(__dirname + "/views/pesquisa.html");
+});
+
 
 
 
