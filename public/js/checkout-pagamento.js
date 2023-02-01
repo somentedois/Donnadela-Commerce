@@ -1,26 +1,28 @@
 const numeroCartao = document.getElementById('numero-cartao');
 
-function numeroCartaoCredito(numeroCartao) {
+function numeroCartaoCredito(input) {
     const onInputKeyDown = (event) => {
-
-        let numeroDigitado = numeroCartao.value;
+        let numeroDigitado = input.value;
         let numeroPressionado = event.key;
-
         event.preventDefault();
-
         let regex = /[0-9]/;
         let ehNumerico = regex.test(numeroPressionado);
-
-        if (ehNumerico && numeroDigitado.length < 16) {
-            alert('Informe o número do cartão com 16 dígitos')
-        } else {
-            document.submit();
+        if (ehNumerico && numeroDigitado.length < 19) { // <===  acho que aqui você deva querer se referir a numeroDigitado.length, não?
+            if (
+                numeroDigitado.length == 4 ||
+                numeroDigitado.length == 9 ||
+                numeroDigitado.length == 14
+            ) {
+                input.value += " " + numeroPressionado;
+            } else {
+                input.value += numeroPressionado;
+            }
         }
     }
-    input.addEventListenner('keydown', onInputKeyDown)
+    input.addEventListener('keydown', onInputKeyDown)
 }
 
-
+numeroCartaoCredito(numeroCartao);
 
 
 const codigoSeguranca = document.getElementById('codigo-seguranca')
