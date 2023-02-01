@@ -8,6 +8,7 @@
     <title>DonaDella</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/nav-principal.css">
+    <script src="js/homeCarousel.js" defer></script>
 
 </head>
 <body>
@@ -98,43 +99,56 @@
     </nav>
     
     <main>
-        <section>
-            <div class="container-main">
-                <div class="left-side">
-                    <div class="itens">
-                        <div class="select-image">
-                            <img src="img/piercing.jpg" alt="">
-                        </div>
-                        <div class="thumbnails">
-                            <div class="thumbnail">
-                                <img src="img/piercing-thumber.jpg" alt="">
-                            </div>
+        <div class="titulo1">Alguns de nossos Trabalhos</div>
+        <div class="slider">
 
-                            <div class="thumbnail">
-                                <img src="img/piercing-thumber.jpg" alt="">
-                            </div>
+            <div class="slides">
+                <!-- Radio Buttons-->
+                <input type="radio" name="radio-btn" id="radio1">
+                <input type="radio" name="radio-btn" id="radio2">
+                <input type="radio" name="radio-btn" id="radio3">
+                <input type="radio" name="radio-btn" id="radio4">
+                <!-- Fim Radio Buttons-->
 
-                            <div class="thumbnail">
-                                <img src="img/piercing-thumber.jpg" alt="">
-                            </div>
-
-                            <div class="thumbnail">
-                                <img src="img/piercing-thumber.jpg" alt="">
-                            </div>
-                        </div>
-                    </div>
+                <!--Slide images-->
+                <div class="slide first">
+                    <img src="img/imagem1.jpg" alt="Imagem 1">
                 </div>
 
-                <div class="right-side">
-                    <h1>Promoção da semana</h1>
-                    <h6>Piercing Umbigo</h6>
-                    <p>Lindo piercing para o seu umbigo, feito em aço cirurgico
-                    para reduzir drasticaamente o risco de alergia. E folhado a ouro 18K.
-                    </p>
-                
-
+                <div class="slide">
+                    <img src="img/imagem2.png" alt="Imagem 2">
                 </div>
-        </section>
+
+                <div class="slide">
+                    <img src="img/imagem3.jpg" alt="Imagem 3">
+                </div>
+
+                <div class="slide">
+                    <img src="img/imagem4.jpg" alt="Imagem 4">
+                </div>
+                <!--Fim Slide Imagens-->
+
+                <!--Naigation auto-->
+                <div class="navigation-auto">
+                    <div class="auto-btn1"></div>
+                    <div class="auto-btn2"></div>
+                    <div class="auto-btn3"></div>
+                    <div class="auto-btn4"></div>
+                </div>
+
+            </div>
+
+            <div class="manual-navigation">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+                <label for="radio4" class="manual-btn"></label>
+            </div>
+
+        </div>
+
+        <div class="titulo1">Alguns de nossos Trabalhos</div>
+
     </main>
     
     <footer>
