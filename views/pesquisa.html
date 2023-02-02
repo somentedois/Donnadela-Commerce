@@ -6,10 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pesquisa de resultados</title>
+    <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/pesquisa.css">
     <link rel="stylesheet" href="css/nav-principal.css">
+    <script src="js/pesquisa.js" defer></script>
 </head>
 <nav id="nav-principal">
     <a class="logo" href="/">
@@ -89,7 +91,7 @@
         </li>
     </ul>
 
-    <input type="search" name="busca" placeholder="O que você procura?">
+    <input type="search" id=campo-de-busca name="busca" placeholder="O que você procura?">
     <button class="bt-buscar">Buscar</button>
 
     <a class="carrinho" href="/carrinho">
@@ -99,14 +101,28 @@
 
 <body>
     <main>
-        <div class="conteiner">
-            <div class="conteudoBuscado">
+        <div class="borda-caminho">
+            <ul>
+                <li>
 
-            </div>
- 
+                    <a href="/">Página Inicial</a>
+                </li>
+                <li>Resultado de busca
+                    <a href=""></a>
+                </li>
+            </ul>
         </div>
-
+        <div>
+            <section class="container-colums">
+                <div>
+                    <img src="" alt="">
+                    <h4>Nome do Produto</h4>
+                    <h2>Preço</h2>
+                </div>
+            </section>
+        </div>
     </main>
+
     <footer>
         <div class="container-footer">
             <div class="row-footer">
@@ -141,6 +157,8 @@
         </div>
     </footer>
 
+
 </body>
+
 
 </html>
