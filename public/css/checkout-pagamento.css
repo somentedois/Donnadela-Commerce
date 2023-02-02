@@ -21,7 +21,7 @@ body {
 
 body,
 html {
-    height: 85%;
+    display: flex;
 }
 
 .w50 {
