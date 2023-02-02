@@ -148,15 +148,16 @@ body #carrinho-header img {
 
 .titulo1{
     font-size: 50px;
-    align-items: center;
+    display: flex;
+    justify-content: center;
 }
-
 
 .slider{
     margin: 50px auto;
     width: 800px;
     height: 600px;
     overflow: hidden;
+    text-align: center;
 }
 
 .slides{
@@ -175,7 +176,7 @@ body #carrinho-header img {
 }
 
 .slide img{
-    width: 600px;
+    width: 580px;
 }
 
 .manual-navigation{
@@ -183,7 +184,8 @@ body #carrinho-header img {
     width: 600px;
     margin-top: 180px;
     display: flex;
-    justify-content: center;
+    margin-left: 310px;
+    text-align: center;
 }
 
 .manual-btn{
@@ -203,7 +205,7 @@ body #carrinho-header img {
 }
 
 #radio1:checked ~ .first{
-    margin-left: 0;
+    margin-left: 0%;
 }
 
 #radio2:checked ~ .first{
@@ -217,6 +219,14 @@ body #carrinho-header img {
 #radio4:checked ~ .first{
     margin-left: -75%;
 }
+
+/* #radio5:checked ~ .first{
+    margin-left: -100%;
+}
+
+#radio6:checked ~ .first{
+    margin-left: -125%;
+} */
 
 .navigation-auto div{
     border: 2px solid ;
@@ -232,7 +242,8 @@ body #carrinho-header img {
     width: 600px;
     margin-top: 581px;
     display: flex;
-    justify-content: center;
+    margin-left: 310px;
+    text-align: center;
 }
 
 .navigation-auto div:not(:last-child){
@@ -254,3 +265,11 @@ body #carrinho-header img {
 #radio4:checked ~ .navigation-auto .auto-btn4{
     background-color: white;
 }
+
+/* #radio5:checked ~ .navigation-auto .auto-btn5{
+    background-color: white;
+}
+
+#radio6:checked ~ .navigation-auto .auto-btn6{
+    background-color: white;
+} */
