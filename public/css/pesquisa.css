@@ -24,7 +24,7 @@ html {
     height: 85%;
 }
 
-main{
+/* main {
     display: flex;
     justify-content: center;
     flex-direction: row;
@@ -33,16 +33,49 @@ main{
     height: 100%;
     box-sizing: border-box;
     margin-top: 2%;
-}   
+} */
 
-main div{
-    display: block;
-    width: 70vw;
+main section.box {
+    display: grid;
+    /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 10px;
+    padding: 10px;
+    position: relative;
+    margin-top: 80px;
+}
+
+main article {
+    position: relative;
+    width: 20vw;
     background-color: aqua;
     border: 2px solid black;
 }
 
-.container-colums{
+main article h4 {
+    position: absolute;
+    left: 0;
+    top: 5px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 5px;    
+    font-size: 1.5rem;
+}
+
+main article h2 {
+    position: absolute;
+    left: 0;
+    top: 45px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #FFF;
+    padding: 5px;    
+}
+
+main article img {
+    width: 100%;
+    height: 100%;
+}
+
+/* .container-colums{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 10px;
@@ -50,7 +83,7 @@ main div{
     position: relative;
     margin-top: 40px;
     
-}
+} */
 
 
 /*Codigo rota usada na busca de produtos*/
