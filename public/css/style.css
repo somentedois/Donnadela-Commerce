@@ -16,7 +16,8 @@ body {
 }
 
 footer {
-    position: fixed;
+    padding-top: 24px; /*Afasta o conteudo de dentro da borda*/
+    margin-top: 48px;
     bottom: 0px;
     width: 100%;
     background: #fff;
