@@ -30,7 +30,7 @@ footer {
 .row-footer {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .footer-col {
