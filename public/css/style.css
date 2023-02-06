@@ -16,23 +16,21 @@ body {
 }
 
 footer {
-    padding-top: 24px; /*Afasta o conteudo de dentro da borda*/
+    padding: 24px 0 24px 0; /*Afasta o conteudo de dentro da borda*/
     margin-top: 48px;
-    bottom: 0px;
     width: 100%;
     background: #fff;
 }
 
 .container-footer {
     max-width: 1400px;
-    padding: 0 4%;
-    margin: 5px;
-    margin-left: 300px;
+    margin: 0 auto 0 auto;
 }
 
 .row-footer {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .footer-col {
