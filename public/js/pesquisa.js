@@ -43,7 +43,7 @@ function showProduto(produto) {
 function showProdutos(produtos){
     section.innerHTML = '';
 
-    produtos.forEach(showProdutos)
+    produtos.forEach(showProduto);
 }
 
 function filtrarProdutos(produtos, trechoBuscado){
