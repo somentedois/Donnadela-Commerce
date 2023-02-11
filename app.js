@@ -12,8 +12,6 @@ servidor.use(express.static(path.join(__dirname, 'public')))
 // 3 - Definir de uma rota neste servidor
 // endereço, método, função callback (a ação que o servidor vai realizar quando re)
 servidor.get('/', (req,res)=>{
-    console.log("Chegou um requisição!");
-    //return res.send("Vou te mandar uma lista de usuarios!");
     return res.sendFile(__dirname + "/views/index.html");
     
 });
