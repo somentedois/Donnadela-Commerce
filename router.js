@@ -1,6 +1,5 @@
 const express = require('express');
 const PaginasController = require('./controllers/PaginasControllers');
-
 const router = express.Router();
 
 // Definir as rotas para o roteador
