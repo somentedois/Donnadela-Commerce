@@ -12,6 +12,17 @@ body {
     height: 100%;
 }
 
+main{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    margin-top: 2%;
+}
+
 .w50 {
     width: 50%;
     float: left;
@@ -104,16 +115,5 @@ form .input-group button{
     border: none;
     margin-top: 15px;
     color: white;
-}
-
-main{
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    box-sizing: border-box;
-    margin-top: 2%;
 }
 

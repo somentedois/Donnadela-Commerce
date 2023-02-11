@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/editar-perfil.css">
     <link rel="stylesheet" href="css/nav-principal.css">
+    <script src="js/cadastro.js" defer></script>
 </head>
 <body>
     <nav id="nav-principal">
@@ -113,6 +114,11 @@
                     <div id="input-group">
                         <label for="email">E-mail</label>
                         <input type="email" id="email" placeholder="Digite o seu e-mail" required>
+                    </div>
+
+                    <div id="input-group">
+                        <label for="telefone">Telefone</label>
+                        <input type="tel" maxlength="15" onkeyup="handlePhone(event)" id="telefone" placeholder="Digite o seu telefone" required>
                     </div>
 
                     <h3>Alterar Senha</h3>
