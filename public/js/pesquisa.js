@@ -1,8 +1,8 @@
-const section = document.querySelector('section');
+const section = document.querySelector('.box');
 const btBuscar = document.querySelector(".btBuscar");
 const campoDeBusca = document.getElementById("campo-de-busca");
 
-let produtos = [
+let produtosDaLoja = [
     {
         "id": 1,
         "nome": "Piercing Umbigo",
@@ -29,26 +29,21 @@ let produtos = [
     },
 ]
 
-function showProdutos(produto) {
-    let div = document.createElement("div")
+function showProduto(produto) {
+    let article = document.createElement("article")
 
-    div.innerHTML = `
-    <img src="${produto.img}" 
-    alt="${produto.nome}">
-        <h2>${produto.nome}</h2>
-        <span>R$ ${produto.preco}</span>
-        <a href="${produto.id}">Ver mais</a>
-        <button>Add+</button>
-    `;
-
-    section.appendChild(div);
-    
+    article.innerHTML = `
+        <img src="${produto.img}" alt="${produto.nome}">
+        <h4>${produto.nome}</h4>
+        <h2>R$ ${produto.preco}</h2>
+        `;
+    section.appendChild(article);
 }
 
 function showProdutos(produtos){
     section.innerHTML = '';
 
-    produtos.forEach(showProdutos)
+    produtos.forEach(showProduto);
 }
 
 function filtrarProdutos(produtos, trechoBuscado){
@@ -64,11 +59,11 @@ function onCampoDeBuscaKeyup(){
     const trechoBuscado = campoDeBusca.value;
 
     // Criar um array com as pizzas filtradas
-    const produtosFiltrados = filtrarProdutos(produtos, trechoBuscado);
+    const produtosFiltrados = filtrarProdutos(produtosDaLoja, trechoBuscado);
 
     // Mostrar as pizzas filtradas
     showProdutos(produtosFiltrados);
 }
 
 campoDeBusca.addEventListener('keyup', onCampoDeBuscaKeyup);
-showProdutos(produtos);
+showProdutos(produtosDaLoja);
