@@ -2,102 +2,12 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/login.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/nav-principal.css">
     <title>Login</title>
+    <%-include('parts/head.ejs', {css: ['style.css', 'login.css', 'nav-principal.css']}) %>
 </head>
 
 <body>
-    <nav id="nav-principal">
-        <a class="logo" href="/">
-            <img src="/img/Logo.png" alt="Logo da Marca">
-        </a>
-
-        <ul>
-            <li>
-                <a href="#">Piercing</a>
-                <ul>
-                    <li>
-                        <a href="#">Orelha</a>
-                        <ul>
-                            <li><a href="#">Tragus</a></li>
-                            <li><a href="#">Hélix</a></li>
-                            <li><a href="#">Conch</a></li>
-                            <li><a href="#">Lóbulo</a></li>
-                            <li><a href="#">Mini</a></li>
-                            <li><a href="#">Scapha</a></li>
-                            <li><a href="#">Daith</a></li>
-                            <li><a href="#">Rook</a></li>
-                        </ul>
-                    </li>
-
-                    <li>
-                        <a href="#">Boca</a>
-                        <ul>
-                            <li><a href="#">Labret</a></li>
-                            <li><a href="#">Vertical Labret</a></li>
-                            <li><a href="#">Monroe / Madonna</a></li>
-                            <li><a href="#">Medusa</a></li>
-                            <li><a href="#">Lingua</a></li>
-                        </ul>
-                    </li>
-
-                    <li>
-                        <a href="#">Nariz</a>
-                        <ul>
-                            <li><a href="#">Aba Nasal</a></li>
-                            <li><a href="#">Septo</a></li>
-                        </ul>
-                    </li>
-
-                    <li><a href="#">Sombrancelha</a></li>
-
-                    <li><a href="#">Umbigo</a></li>
-
-                    <li><a href="#">Mamilo</a>
-                        <div class="sub-menu-2">
-                            <ul>
-                                <li><a href="#">Feminino</a></li>
-                                <li><a href="#">Masculino</a></li>
-                            </ul>
-                        </div>
-                    </li>
-
-                    <li><a href="#">Íntimos</a>
-                        <div class="sub-menu-2">
-                            <ul>
-                                <li><a href="#">Vertical Hood</a></li>
-                                <li><a href="#">Horinzontal Hood</a></li>
-                                <li><a href="#">Cristina</a></li>
-                            </ul>
-                        </div>
-                    </li>
-
-                </ul>
-            </li>
-            <li><a href="#">Vale Presente</a></li>
-            <li><a href="#">Cuidados</a></li>
-            <li>
-                <a href="#">Conta</a>
-                <ul>
-                    <li><a href="login">Login</a></li>
-                    <li><a href="cadastro">Cadastrar</a></li>
-                </ul>
-            </li>
-        </ul>
-
-        <input type="search" name="busca" placeholder="O que você procura?">
-        <button class="bt-buscar">Buscar</button>
-
-        <a class="carrinho" href="/carrinho">
-            <img src="img/carrinho.png" alt="">
-        </a>
-    </nav>
+    <%-include('parts/header.ejs') %>
     <main>
         <div class="box">
             <div class="img-box">
@@ -128,39 +38,7 @@
             </div>
         </div>
     </main>
-    <footer>
-        <div class="container-footer">
-            <div class="row-footer">
-                <!-- footer col-->
-                <div class="footer-col">
-                    <h4>Empresa</h4>
-                    <ul>
-                        <li> <a href="">Quem somos</a></li>
-                        <li> <a href="">Nossos Serviços</a></li>
-                    </ul>
-                </div>
-                <!-- end footer col-->
-                <!-- footer col-->
-                <div class="footer-col">
-                    <h4>Obter Ajuda</h4>
-                    <ul>
-                        <li> <a href="">SAQ</a></li>
-                        <li> <a href="">Opções de pagamento</a></li>
-                    </ul>
-                </div>
-                <!-- end footer col-->
-                <!-- footer col-->
-                <div class="footer-col">
-                    <h4>Siga-nos</h4>
-                    <div class="medias-sociais">
-                        <a href="https://www.instagram.com/donadella_fh/"> <i class="fa fa-instagram"></i></a>
-                        <a href="https://www.facebook.com/donadella.fh"> <i class="fa fa-facebook"></i></a>
-                    </div>
-                </div>
-                <!-- end footer col-->
-            </div>
-        </div>
-    </footer>
+    <%-include('parts/footer.ejs') %>
 </body>
 
 </html>
