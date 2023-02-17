@@ -29,6 +29,8 @@ router.get('/editar-endereco', PaginasController.editarEndereco);
 
 router.get('/pesquisa', PaginasController.pesquisa);
 
+router.get('/form-edit.produto.ejs', PaginasController.form-edit.produto);
+
 
 // Exportar o roteador
 module.exports = router;

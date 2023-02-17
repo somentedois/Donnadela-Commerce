@@ -52,6 +52,10 @@ const PaginasController = {
 
     pesquisa: (req, res) => {
         return res.render('pesquisa.ejs');
+    },
+
+    formEditProduto: (req, res) => {
+        return res.render('form-edit-produto.ejs');
     }
 
 }
