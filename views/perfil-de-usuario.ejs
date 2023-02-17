@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Perfil</title>
+    <%-include('parts/head.ejs', {css: ['style.css', 'perfil-de-usuario.css', 'nav-principal.css']}) %>
+
+</head>
+<body>
+    <%-include('parts/header.ejs') %>
+
+    <main>
+        <div class="side1">
+            <h1 class="title">Perfil do Usuário</h1>
+        <section class="profile">
+            <img src="img/perfil-default.jpg" alt="">
+            <article class="client-info">
+                <h3>Ingrid dos Santos</h3>
+                <p>E-mail: ingrid@dossantos.com</p>
+                <p>Cliente desde abril de 2022</p>
+            </article>
+            <div class="links-profile">
+                <a href="editar-perfil">Editar</a>
+            </div>
+        </section>
+        <hr class="line1">
+        <section class="orders">
+            <h3>Pedidos</h3>
+            <hr id="line-top">
+            <div id="orders-date"> 
+                <p>18/01/2023</p> 
+                <p>R$ 298,33</p>
+            </div>
+            <hr id="line">
+            <div id="orders-date"> 
+                <p>10/01/2023</p> 
+                <p>R$ 65,55</p>
+            </div>
+            <hr id="line">
+        </section>
+        </div>
+        <div class="side2">
+            <section class="address">
+                <h3>Endereços</h3>
+                <hr id="line-top">
+                <div id="addresses"> 
+                    <p>Rua das Flores, 200. Santo André-SP. CEP 87489-020</p> 
+                    <a href="#" id="signal">-</a>
+                </div>
+                <hr id="line">
+                <div id="addresses"> 
+                    <p>Rua das Mercedes, 1800. Santo André-SP. CEP 85489-414</p> 
+                    <a href="#" id="signal">+</a>
+                </div> 
+                <hr id="line">
+                <div id="addresses"> 
+                    <p>Av. das Cores, 200. Santo André-SP. CEP 85459-878</p> 
+                    <a href="#" id="signal">+</a>
+                </div>
+                <hr id="line">
+                <div class="add-address">
+                    <a href="editar-endereco">Adicionar Endereço</a>
+                </div>
+            </section>
+        </div>
+    </main>
+    <%-include('parts/footer.ejs') %>
+</body>
+</html>

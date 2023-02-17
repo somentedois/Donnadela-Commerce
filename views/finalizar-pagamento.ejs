@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Verificação de Dados</title>
+
+    <%-include('parts/head.ejs', {css: ['style.css', 'finalizar-pagamento.css', 'nav-principal.css']}) %>
+
+</head>
+<body>
+    <%-include('parts/header.ejs') %>
+    <div class="box">
+        <div class="img-box">
+          <a href="/">  <img id="logo-quadrado" src="/img/logo-quadrado.png"> </a>
+        </div>
+        
+        <div class="confirmacao">
+            <h2>Confira seus dados!</h2>
+    
+
+            <form action="#">
+                <div class="input-group">
+                    <h2>Dados para entrega</h2>
+                    <label for="nome">Nome Completo</label>
+                    <label for="endereco">Endereço</label>
+                    <label for="bairro">Bairro</label>
+                    <label for="cidade">Cidade</label>
+                    
+                </div>
+
+                <div class="input-group">
+                    <h2>
+                        Dados de pagamentos:
+                    </h2>
+
+                </div>
+                <div class="input-group">
+                   <h2>
+                    Produtos
+                   </h2>
+                </div>
+
+                <div id="conteiner-bt">
+                    <a href="/" id="bt-home">Realizar o pagamento</a>
+                </div>
+
+            </form>
+        </div>
+    </div>
+    <%-include('parts/footer.ejs') %>
+</body>
+</html>

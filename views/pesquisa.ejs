@@ -2,15 +2,12 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Confirmação de Compra</title>
-    <link rel="stylesheet" href="css/confirmacao-compra.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/nav-principal.css">
+    <title>Pesquisa de resultados</title>
+    <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet" />
+    <%-include('parts/head.ejs', {css: ['style.css', 'pesquisa.css', 'nav-principal.css']}) %>
+    <script src="js/pesquisa.js" defer></script>
 </head>
+
 
 <body>
     <nav id="nav-principal">
@@ -91,68 +88,56 @@
             </li>
         </ul>
     
-        <input type="search" name="busca" placeholder="O que você procura?">
+        <input type="search" id=campo-de-busca name="busca" placeholder="O que você procura?">
         <button class="bt-buscar">Buscar</button>
     
         <a class="carrinho" href="/carrinho">
             <img src="img/carrinho.png" alt="">
         </a>
     </nav>
-    <main class="main">
-        <div class="box">
-            <div class="img-box">
-                <a href="/">  <img id="logo-quadrado" src="/img/logo-quadrado.png"> </a>
-              </div>
-            
-            <div class="confirmacao">
-                <h4>Pedido realizado com sucesso!</h4>
-                <p>Seu pagamento está sendo processo e assim que for aprovado, será enviado um email de confirmação.</p>
-                    <div id="conteiner-bt">
-                        <a href="/" id="bt-home">Voltar a pagina inicial</a>
-                    </div>
-    
-            </div>
-        </div>
-        
-    </main>
- 
 
-    </main>
-    <footer>
-        <div class="container-footer">
-            <div class="row-footer">
-                <!-- footer col-->
-                <div class="footer-col">
-                    <h4>Empresa</h4>
-                    <ul>
-                        <li> <a href="">Quem somos</a></li>
-                        <li> <a href="">Nossos Serviços</a></li>
-                    </ul>
-                </div>
-                <!-- end footer col-->
-                    <!-- footer col-->
-                    <div class="footer-col">
-                        <h4>Obter Ajuda</h4>
-                        <ul>
-                            <li> <a href="">SAQ</a></li>
-                            <li> <a href="">Opções de pagamento</a></li>
-                        </ul>
-                    </div>
-                    <!-- end footer col-->
-                        <!-- footer col-->
-                        <div class="footer-col">
-                            <h4>Siga-nos</h4>
-                            <div class="medias-sociais">
-                                <a href="https://www.instagram.com/donadella_fh/"> <i class="fa fa-instagram"></i></a>
-                                <a href="https://www.facebook.com/donadella.fh"> <i class="fa fa-facebook"></i></a>
-                            </div>
-                        </div>
-                        <!-- end footer col-->
-            </div>
+    <main>
+        <div class="borda-caminho">
+            <ul>
+                <li>
+                    <a href="/">Página Inicial</a>
+                </li>
+                <li>Resultado de busca
+                    <a href=""></a>
+                </li>
+            </ul>
         </div>
-    </footer>
+        <section class="box">
+                <article id="produto-buscado">
+                    <img src="img/piercing.jpg" alt="">
+                    <h4>Nome do Produto</h4>
+                    <h2>Preço</h2>
+                </article>
+
+                <article id="produto-buscado">
+                    <img src="img/piercing.jpg" alt="">
+                    <h4>Nome do Produto</h4>
+                    <h2>Preço</h2>
+                </article>
+
+                <article id="produto-buscado">
+                    <img src="img/piercing.jpg" alt="">
+                    <h4>Nome do Produto</h4>
+                    <h2>Preço</h2>
+                </article>
+
+                <article id="produto-buscado">
+                    <img src="img/piercing.jpg" alt="">
+                    <h4>Nome do Produto</h4>
+                    <h2>Preço</h2>
+                </article>
+        </section>
+    </main>
+
+    <%-include('parts/footer.ejs') %>
+
+
 </body>
-
 
 
 </html>

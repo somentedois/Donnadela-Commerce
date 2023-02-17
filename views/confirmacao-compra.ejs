@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Confirmação de Compra</title>
+    <%-include('parts/head.ejs', {css: ['style.css', 'confirmacao-compra.css', 'nav-principal.css']}) %>
+</head>
+
+<body>
+    <%-include('parts/header.ejs') %>
+    <main class="main">
+        <div class="box">
+            <div class="img-box">
+                <a href="/">  <img id="logo-quadrado" src="/img/logo-quadrado.png"> </a>
+              </div>
+            
+            <div class="confirmacao">
+                <h4>Pedido realizado com sucesso!</h4>
+                <p>Seu pagamento está sendo processo e assim que for aprovado, será enviado um email de confirmação.</p>
+                    <div id="conteiner-bt">
+                        <a href="/" id="bt-home">Voltar a pagina inicial</a>
+                    </div>
+    
+            </div>
+        </div>
+        
+
+ 
+
+    </main>
+    <%-include('parts/footer.ejs') %>
+</body>
+
+
+
+</html>

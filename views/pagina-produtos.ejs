@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>DonaDella</title>
+    <%-include('parts/head.ejs', {css: ['style.css', 'pagina-produtos.css', 'nav-principal.css']}) %>
+
+</head>
+<body>
+    <%-include('parts/header.ejs') %>
+    <main>
+        <section>
+            <div class="container">
+                <div class="left-side">
+                    <div class="items">
+                        <div class="select-image">
+                            <img src="img/piercing.jpg" alt="">
+                        </div>
+                        <div class="thumbnails">
+                            <div class="thumbnail">
+                                <img src="/img/piercing.jpg" alt="">
+                            </div>
+                            
+                            <div class="thumbnail">
+                                <img src="/img/piercing.jpg" alt="">
+                            </div>
+
+                            <div class="thumbnail">
+                                <img src="/img/piercing.jpg" alt="">
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                <div class="right-side">
+                    <div class="content">
+                        <h6>DonaDella</h6>
+                        <h1>Produto Selecionado</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni magnam architecto alias minima. Nesciunt veritatis non ratione maiores eaque, placeat corporis ea recusandae dolorum deleniti, iure rerum quae! Sint, aut.</p>
+                        <span class="price">Preço: R$125,00</span>
+                        <div class="options">
+                            <div class="amount">
+                                <div class="minus">
+                                    <img src="img/pngegg.png" alt="">
+                                </div>
+                                <span>0</span>
+                                <div class="plus">
+                                    <img src="img/pngegg (1).png" alt="">
+                                </div>
+                            </div>                          
+                            <a class="carrinho" href="/carrinho"><img src="img/carrinho.png" alt="">Add ao carrinho</a>
+                        </div>
+                    </div>               
+                </div>                
+              </div>                
+        </section>
+    </main>
+    <%-include('parts/footer.ejs') %>
+</body>
+</html>

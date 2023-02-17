@@ -19,11 +19,6 @@ body {
     height: 100%;
 }
 
-body,
-html {
-    height: 85%;
-}
-
 .w50 {
     width: 50%;
     float: left;
@@ -38,6 +33,7 @@ main {
     width: 100%;
     height: 100%;
     box-sizing: border-box;
+    padding-top: 60px;
 }
 
 .box {

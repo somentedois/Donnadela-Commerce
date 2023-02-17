@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Cadastro</title>
+    <%-include('parts/head.ejs', {css: ['style.css', 'cadastro.css', 'nav-principal.css']}) %>
+</head>
+
+
+<body>
+    <%-include('parts/header.ejs') %>
+    <main>
+        <div class="box">
+            <div class="img-box">
+                <a href="/"> <img id="logo-quadrado" src="/img/logo-quadrado.png"> </a>
+            </div>
+
+            <div class="form-box">
+                <h2>Criar conta</h2>
+                <p>Já tenho conta <a href="login"> Login </a></p>
+
+                <form action="#">
+                    <div class="input-group">
+                        <label for="nome">Nome Completo</label>
+                        <input type="text" id="nome" placeholder="Digite o seu nome completo" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" placeholder="Digite o seu e-mail" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="telefone">Telefone</label>
+                        <input type="tel" maxlength="15" onkeyup="handlePhone(event)" id="telefone" placeholder="Digite o seu telefone" required>
+                    </div>
+
+                    <div class="input-group w50">
+                        <label for="senha">Senha</label>
+                        <input type="password" id="senha" placeholder="Digite sua senha" required>
+                    </div>
+
+                    <div class="input-group w50">
+                        <label for="confirmarsenha">Confirmar senha</label>
+                        <input type="password" id="confirmarSenha" placeholder="Confirme sua senha" required>
+                    </div>
+
+                    <div class="input-group">
+                        <button>Cadastrar</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </main>
+    <%-include('parts/footer.ejs') %>
+</body>
+<script src="js/cadastro.js" defer></script>
+</html>

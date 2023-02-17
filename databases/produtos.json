@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "nome": "Piercing Umbigo",
+        "preco": 38.5,
+        "img": "/img/foto1.jpg",
+        "destaque": true,
+        "score": 27
+    },
+    {
+        "id": 2,
+        "nome": "Piercing Orelha",
+        "preco": 48.55,
+        "img": "/img/foto2.jpg",
+        "destaque": false,
+        "score": 24
+    },
+    {
+        "id": 3,
+        "nome": "Piercing Nariz",
+        "preco": 38.5,
+        "img": "/img/foto3.jpg",
+        "destaque": true,
+        "score": 12
+    },
+    {
+        "id": 4,
+        "nome": "Piercing Orelha 2",
+        "preco": 48.5,
+        "img": "/img/foto4.jpg",
+        "destaque": true,
+        "score": 12
+    },
+    {
+        "id": 5,
+        "nome": "Piercing Nariz",
+        "preco": 38.5,
+        "img": "/img/foto3.jpg",
+        "destaque": true,
+        "score": 12
+    },
+    {
+        "id": 6,
+        "nome": "Piercing Nariz",
+        "preco": 38.5,
+        "img": "/img/foto3.jpg",
+        "destaque": true,
+        "score": 12
+    }
+]

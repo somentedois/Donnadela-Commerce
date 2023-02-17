@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Login</title>
+    <%-include('parts/head.ejs', {css: ['style.css', 'login.css', 'nav-principal.css']}) %>
+</head>
+
+<body>
+    <%-include('parts/header.ejs') %>
+    <main>
+        <div class="box">
+            <div class="img-box">
+                <a href="/"> <img id="logo-quadrado" src="/img/logo-quadrado.png"> </a>
+            </div>
+
+            <div class="form-box">
+                <h2>Login</h2>
+                <p>Não tenho Login <a href="cadastro"> Cadastrar </a></p>
+
+                <form action="#">
+
+                    <div class="input-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" placeholder="Digite o seu e-mail" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="senha">Senha</label>
+                        <input type="password" id="senha" placeholder="Digite sua senha" required>
+                    </div>
+
+                    <div class="input-group">
+                        <button>Entrar</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </main>
+    <%-include('parts/footer.ejs') %>
+</body>
+
+</html>

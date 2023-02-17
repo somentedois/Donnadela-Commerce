@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Roboto:wght@300&display=swap');
+
+root {
+    --cor-do-fundo: rgb(204, 180, 113);
+    --cor-da-fonte: rgb(96, 80, 48);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--cor-do-fundo);
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+body,
+html {
+    height: 85%;
+}
+
+/* main {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    margin-top: 2%;
+} */
+
+main section.box {
+    display: grid;
+    /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 10px;
+    padding: 10px;
+    position: relative;
+    margin-top: 80px;
+}
+
+main article {
+    position: relative;
+    width: 20vw;
+    background-color: aqua;
+    border: 2px solid black;
+}
+
+main article h4 {
+    position: absolute;
+    left: 0;
+    top: 5px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 5px;    
+    font-size: 1.5rem;
+}
+
+main article h2 {
+    position: absolute;
+    left: 0;
+    top: 45px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #FFF;
+    padding: 5px;    
+}
+
+main article img {
+    width: 100%;
+    height: 100%;
+}
+
+/* .container-colums{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 10px;
+    padding: 10px;
+    position: relative;
+    margin-top: 40px;
+    
+} */
+
+
+/*Codigo rota usada na busca de produtos*/
+.borda-caminho{
+    display: flex;
+    border-bottom: 1px solid rgb(220, 220, 220);
+    margin-bottom: 20px;
+    flex-direction: row;
+}
+
+ul{
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+.borda-caminho ul li:not(:last-child):after {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 700;
+    content: "\f105";
+}
+
+ul, li {
+    list-style-type: none;
+}
