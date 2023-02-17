@@ -29,6 +29,10 @@ router.get('/editar-endereco', PaginasController.editarEndereco);
 
 router.get('/pesquisa', PaginasController.pesquisa);
 
+router.get('/lista-produto', PaginasController.listaProduto);
+
+router.get('/form-add-produto', PaginasController.adicionarProduto);
+
 router.get('/form-edit.produto.ejs', PaginasController.form-edit.produto);
 
 

@@ -56,6 +56,12 @@ const PaginasController = {
 
     formEditProduto: (req, res) => {
         return res.render('form-edit-produto.ejs');
+    },    
+    listaProduto: (req, res) => {
+        return res.render('lista-produto.ejs');
+    },
+    adicionarProduto: (req, res) => {
+        return res.render('form-add-produto.ejs');
     }
 
 }

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Lista de Produtos</title>
+    <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet" />
+    <%-include('parts/head.ejs', {css: ['style.css', 'pesquisa.css', 'nav-principal.css']}) %>
+    <script src="js/pesquisa.js" defer></script>
+</head>
+
+
+<body>
+    <%-include('parts/header.ejs') %>
+
+    <main>
+        <section class="box">
+            <article id="produto-buscado">
+                <img src="<%= produto.img %>" alt="<%= produto.nome %>">
+                <h4><%= produto.nome %></h4>
+                <h2><%= produto.preco.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'}) %></h2>
+            </article>
+            <div> 
+                <a class="bt" href="/form-edit-produto">Editar</a>
+                <a class="bt" href="#">Remover</a> 
+            </div>
+        </section>
+    </main>
+
+    <%-include('parts/footer.ejs') %>
+
+
+</body>
+
+
+</html>
