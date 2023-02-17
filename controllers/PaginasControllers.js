@@ -52,6 +52,12 @@ const PaginasController = {
 
     pesquisa: (req, res) => {
         return res.render('pesquisa.ejs');
+    },
+    listaProduto: (req, res) => {
+        return res.render('lista-produto.ejs');
+    },
+    adicionarProduto: (req, res) => {
+        return res.render('form-add-produto.ejs');
     }
 
 }

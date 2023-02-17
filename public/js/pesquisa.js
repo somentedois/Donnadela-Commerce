@@ -2,6 +2,7 @@ const section = document.querySelector('.box');
 const btBuscar = document.querySelector(".btBuscar");
 const campoDeBusca = document.getElementById("campo-de-busca");
 
+
 let produtosDaLoja = [
     {
         "id": 1,
@@ -66,4 +67,6 @@ function onCampoDeBuscaKeyup(){
 }
 
 campoDeBusca.addEventListener('keyup', onCampoDeBuscaKeyup);
-showProdutos(produtosDaLoja);
+showProdutos(produtos);
+
+console.log(produtos);
