@@ -33,7 +33,7 @@ router.get('/lista-produto', PaginasController.listaProduto);
 
 router.get('/form-add-produto', PaginasController.adicionarProduto);
 
-router.get('/form-edit.produto.ejs', PaginasController.formEditProduto);
+router.get('/form-edit-produto.ejs', PaginasController.formEditProduto);
 
 
 // Exportar o roteador

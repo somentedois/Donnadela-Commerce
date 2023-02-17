@@ -13,16 +13,19 @@
     <%-include('parts/header.ejs') %>
 
     <main>
+        <a href="/form-edit-produto">Adicionar nova pizza</a>
         <section class="box">
-            <article id="produto-buscado">
-                <img src="<%= produto.img %>" alt="<%= produto.nome %>">
-                <h4><%= produto.nome %></h4>
-                <h2><%= produto.preco.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'}) %></h2>
-            </article>
-            <div> 
-                <a class="bt" href="/form-edit-produto">Editar</a>
-                <a class="bt" href="#">Remover</a> 
-            </div>
+            <% for(const p of produtos) { %>
+                <article id="produto-buscado">
+                    <img src="<%= produto.img %>" alt="<%= produto.nome %>">
+                    <h4><%= produto.nome %></h4>
+                    <h2><%= produto.preco.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'}) %></h2>
+                </article>
+                <div> 
+                    <a class="bt" href="/form-edit-produto">Editar</a>
+                    <a class="bt" href="#">Remover</a> 
+                </div>
+            <% } %>
         </section>
     </main>
 
