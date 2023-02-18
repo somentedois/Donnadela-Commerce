@@ -6,6 +6,10 @@
     font-family: 'Poppins', sans-serif;
 }
 
+html {
+    height: 100%;
+}
+
 :root {
     --cor-do-fundo: rgb(204, 180, 113);
     --cor-da-fonte: rgb(96, 80, 48);
@@ -13,11 +17,14 @@
 
 body {
     background-color: var(--cor-do-fundo);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 footer {
     padding: 24px 0 24px 0; /*Afasta o conteudo de dentro da borda*/
-    margin-top: 48px;
+    margin-top: auto;
     width: 100%;
     background: #fff;
 }
