@@ -19,10 +19,6 @@ body {
     height: 100%;
 }
 
-body,
-html {
-    height: 85%;
-}
 
 /* main {
     display: flex;
