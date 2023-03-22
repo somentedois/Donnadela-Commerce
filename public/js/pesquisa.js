@@ -67,6 +67,7 @@ function onCampoDeBuscaKeyup(){
 }
 
 campoDeBusca.addEventListener('keyup', onCampoDeBuscaKeyup);
+
 showProdutos(produtos);
 
 console.log(produtos);
