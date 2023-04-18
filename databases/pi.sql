@@ -1,3 +1,7 @@
+DROP DATABASE IF EXISTS projeto_integrador;
+CREATE DATABASE projeto_integrador;
+use projeto_integrador;
+
 CREATE TABLE `categoria` (
   `id` int NOT NULL AUTO_INCREMENT,
   `nome` varchar(255) NOT NULL,
@@ -51,4 +55,3 @@ CREATE TABLE `pedido` (
   KEY `produto_fk_1_idx` (`categoria_id`),
   CONSTRAINT `produto_fk_1` FOREIGN KEY (`categoria_id`) REFERENCES `categoria` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
