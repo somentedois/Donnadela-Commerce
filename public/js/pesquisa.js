@@ -1,5 +1,4 @@
 const section = document.querySelector('.box');
-const btBuscar = document.querySelector(".btBuscar");
 const campoDeBusca = document.getElementById("campo-de-busca");
 
 
