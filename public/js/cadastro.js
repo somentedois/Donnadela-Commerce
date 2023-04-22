@@ -9,9 +9,11 @@ form.addEventListener('submit', function(event) {
 
   if(senha.value.length < 8) {
     mostrarErro(senha.id, 'A senha deve ter no mínimo 8 caracteres')
+    return false;
   } 
   if(confirmarSenha.value.length < 8) {
     mostrarErro(confirmarSenha.id, 'A senha deve ter no mínimo 8 caracteres')
+    return false;
   }
 
   if(senha.value !== confirmarSenha.value) {

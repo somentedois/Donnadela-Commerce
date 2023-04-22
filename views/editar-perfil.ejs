@@ -2,9 +2,9 @@
 <html lang="pt-br">
 <head>
     <title>Editar Perfil</title>
-    <%-include('parts/head.ejs', {css: ['style.css', 'editar-perfil.css', 'nav-principal.css']}) %>
+    <%-include('parts/head.ejs', {css: ['style.css', 'cadastro.css', 'nav-principal.css']}) %>
 
-    <script src="js/cadastro.js" defer></script>
+    
 </head>
 <body>
     <%-include('parts/header.ejs') %>
@@ -14,43 +14,44 @@
                 <a href="/"><img id="logo-quadrado" src="/img/logo-quadrado.png"></a>
             </div>
             
-            <div class="form-box">
+            <div class="form-box" >
                 <h2>Editar Perfil</h2>
-                <form action="#">
-                    <div id="input-group">
-                        <label for="nome">Nome</label>
-                        <input type="nome" id="nome" placeholder="Digite o seu nome" required>
+                <form id="form" action="/" method="PUT">
+                    <div class="input-group">
+                        <label for="nome">Nome Completo</label>
+                        <input type="text" id="nome" placeholder="Digite o seu nome completo" required>
                     </div>
-                    
-                    <div id="input-group">
+
+                    <div class="input-group">
                         <label for="email">E-mail</label>
                         <input type="email" id="email" placeholder="Digite o seu e-mail" required>
                     </div>
 
-                    <div id="input-group">
+                    <div class="input-group">
                         <label for="telefone">Telefone</label>
                         <input type="tel" maxlength="15" onkeyup="handlePhone(event)" id="telefone" placeholder="Digite o seu telefone" required>
                     </div>
 
-                    <h3>Alterar Senha</h3>
-                    <div id="input-group">
-                        <label for="senha">Nova senha</label>
+                    <div class="input-group w50">
+                        <label for="senha">Alterar Senha</label>
                         <input type="password" id="senha" placeholder="Digite sua senha" required>
+                        <span id="error" class="error">Erro!</span>
+                    </div>
+
+                    <div class="input-group w50">
+                        <label for="confirmarsenha">Confirmar senha</label>
+                        <input type="password" id="confirmarSenha" placeholder="Confirme sua senha" required>
+                        <span id="error" class="error">Erro!</span>
                     </div>
                     
-                    <div id="input-group">
-                        <label for="confirmarsenha">Confirmar nova senha</label>
-                        <input type="password" id="confirmarSenha" placeholder="Confirme sua senha" required>
-                    </div>
-    
-                    <div id="input-group">
-                        <button>Salvar</button>
-                    </div>
-    
+                    <div class="input-group">
+                        <input id="botao" type="submit" value="Cadastrar">
+                    </div> 
                 </form>
             </div>
         </div>
     </main>
     <%-include('parts/footer.ejs') %>
 </body>
+<script src="js/cadastro.js" defer></script>
 </html>
