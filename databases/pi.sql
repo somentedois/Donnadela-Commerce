@@ -45,7 +45,7 @@ CREATE TABLE pedido (
   obs varchar(255) DEFAULT NULL,
   PRIMARY KEY (id),
   FOREIGN KEY (endereco_id) REFERENCES enderecos (id),
-  FOREIGN KEY (cliente_id) REFERENCES cliente (`id`),
+  FOREIGN KEY (cliente_id) REFERENCES cliente (id),
   FOREIGN KEY (forma_pagamento_id) REFERENCES forma_de_pagamento (id)
 );
 
