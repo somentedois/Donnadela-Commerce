@@ -2,87 +2,51 @@ const senha = document.getElementById('senha');
 const confirmarSenha = document.getElementById('confirmarSenha');
 const form = document.getElementById('form');
 
-function onFormSubmit(evento){
-  evento.preventDefault();
-  console.log("Tentou enviar o formulário");
-  let camposErrados = [];
-  if(!qtdSenha()) {
-    camposErrados.push("senha");
+// Validação dos campos de Senha
+
+form.addEventListener('submit', function(event) {
+  event.preventDefault();
+
+  if(senha.value.length < 8) {
+    mostrarErro(senha.id, 'A senha deve ter no mínimo 8 caracteres')
   } 
-  if(!qtdConfimacaoSenha()) {
-    camposErrados.push("confirmarSenha");
+  if(confirmarSenha.value.length < 8) {
+    mostrarErro(confirmarSenha.id, 'A senha deve ter no mínimo 8 caracteres')
   }
-  if(camposErrados.length == 0){
-    form.submit();
+
+  if(senha.value !== confirmarSenha.value) {
+    mostrarErro(confirmarSenha.id, 'As senhas devem ser iguais!');
   } else {
-    camposErrados.forEach();
+    form.submit();
+    console.log('enviou o form')
   }
-  console.log("não foi dessa vez!")
-}
+
+});
 
 function mostrarErro(idInput, mensagemErro) {
   const span = document.querySelector(`#${idInput} + span`);
   span.innerHTML = mensagemErro;
   span.style.visibility = "visible";
+  span.style.color = "red";
+  span.style.fontSize = 11 + "px";
+  span.style.display = "contents";
 }
 
-// Validação de quantidade de senha
-function qtdSenha(){
-  // if (senha.value.length < 8) {
-  //   senha.setCustomValidity("Informe uma senha com no mínimo 8 caracteres");
-  // } else {
-  //   senha.setCustomValidity('');
-  // }
-  return senha.value.length >= 8;
-}
+senha.addEventListener('keyup', () => {
+  if(senha.value.length >= 8) {
+    const span = document.querySelector(`#${senha.id} + span`);
+    span.style.visibility = "hidden";
+    span.style.display = "none";
+  }
+});
 
-function qtdConfimacaoSenha() {
-  // if (confirmarSenha.value.length < 8) {
-  //   confirmarSenha.setCustomValidity("Informe uma senha com no mínimo 8 caracteres");
-  // } else {
-  //   confirmarSenha.setCustomValidity('');
-  // }
-  return confirmarSenha.value.length >= 8;
-}
-
-
-form.onsubmit = onFormSubmit;
-
-
-// Validação dos campos iguais de senha
-function validaSenha() {
-    if(senha.value !== confirmarSenha.value) {
-      confirmarSenha.setCustomValidity("Senhas diferentes! \nPor favor, digite as duas senhas iguais");
-    } else {
-      confirmarSenha.setCustomValidity('');
-    }
-}
-
-
-// Validação caracteres
-
-// const regex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[$*&@#])$/;
-
-// function caracterSenha() {
-//   if (regex.test(senha)) {
-//     senha.setCustomValidity("A senha deve conter no mínimo 1 caracteres em maiúsculo, 1 números e 1 caractere especial!");
-//   } else {
-//     senha.setCustomValidity('');
-//   }
-  
-//   if (regex.test(confirmarSenha)) {
-//     confirmarSenha.setCustomValidity("A senha deve conter no mínimo 1 caracteres em maiúsculo, 1 números e 1 caractere especial!");
-//   } else {
-//     confirmarSenha.setCustomValidity('');
-//   }
-// }
-
-// senha.onchange = caracterSenha;
-// confirmarSenha.onchange = caracterSenha;
-// senha.onkeyup = caracterSenha;
-// confirmarSenha.onkeyup = caracterSenha;
-
-
+confirmarSenha.addEventListener('keyup', () => {
+  if(confirmarSenha.value.length >= 8) {
+    const span = document.querySelector(`#${confirmarSenha.id} + span`);
+    span.style.visibility = "hidden";
+    span.style.display = "none";
+  }
+});
 
 // Máscara de formatação do Telefone
 
@@ -98,3 +62,4 @@ const phoneMask = (value) => {
     value = value.replace(/(\d)(\d{4})$/,"$1-$2")
     return value
 }
+
