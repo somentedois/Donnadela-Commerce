@@ -1,27 +1,52 @@
 const senha = document.getElementById('senha');
 const confirmarSenha = document.getElementById('confirmarSenha');
+const form = document.getElementById('form');
 
+function onFormSubmit(evento){
+  evento.preventDefault();
+  console.log("Tentou enviar o formulário");
+  let camposErrados = [];
+  if(!qtdSenha()) {
+    camposErrados.push("senha");
+  } 
+  if(!qtdConfimacaoSenha()) {
+    camposErrados.push("confirmarSenha");
+  }
+  if(camposErrados.length == 0){
+    form.submit();
+  } else {
+    camposErrados.forEach();
+  }
+  console.log("não foi dessa vez!")
+}
+
+function mostrarErro(idInput, mensagemErro) {
+  const span = document.querySelector(`#${idInput} + span`);
+  span.innerHTML = mensagemErro;
+  span.style.visibility = "visible";
+}
 
 // Validação de quantidade de senha
 function qtdSenha(){
-  
-  if (senha.value.length < 8) {
-    senha.setCustomValidity("Informe uma senha com no mínimo 8 caracteres");
-  } else {
-    senha.setCustomValidity('');
-  }
-  
-  if (confirmarSenha.value.length < 8) {
-    confirmarSenha.setCustomValidity("Informe uma senha com no mínimo 8 caracteres");
-  } else {
-    confirmarSenha.setCustomValidity('');
-  }
+  // if (senha.value.length < 8) {
+  //   senha.setCustomValidity("Informe uma senha com no mínimo 8 caracteres");
+  // } else {
+  //   senha.setCustomValidity('');
+  // }
+  return senha.value.length >= 8;
 }
 
-senha.onchange = qtdSenha;
-confirmarSenha.onchange = qtdSenha;
-senha.onkeyup = qtdSenha;
-confirmarSenha.onkeyup = qtdSenha;
+function qtdConfimacaoSenha() {
+  // if (confirmarSenha.value.length < 8) {
+  //   confirmarSenha.setCustomValidity("Informe uma senha com no mínimo 8 caracteres");
+  // } else {
+  //   confirmarSenha.setCustomValidity('');
+  // }
+  return confirmarSenha.value.length >= 8;
+}
+
+
+form.onsubmit = onFormSubmit;
 
 
 // Validação dos campos iguais de senha
@@ -31,10 +56,7 @@ function validaSenha() {
     } else {
       confirmarSenha.setCustomValidity('');
     }
-  }
-  
-senha.onchange = validaSenha;
-confirmarSenha.onkeyup = validaSenha;
+}
 
 
 // Validação caracteres

@@ -19,7 +19,7 @@
                 <h2>Criar conta</h2>
                 <p>Já tenho conta <a href="login"> Login </a></p>
 
-                <form action="#">
+                <form id="form" action="#">
                     <div class="input-group">
                         <label for="nome">Nome Completo</label>
                         <input type="text" id="nome" placeholder="Digite o seu nome completo" required>
@@ -38,11 +38,13 @@
                     <div class="input-group w50">
                         <label for="senha">Senha</label>
                         <input type="password" id="senha" placeholder="Digite sua senha" required>
+                        <span class="error">Erro!</span>
                     </div>
 
                     <div class="input-group w50">
                         <label for="confirmarsenha">Confirmar senha</label>
                         <input type="password" id="confirmarSenha" placeholder="Confirme sua senha" required>
+                        <span class="error">Erro!</span>
                     </div>
 
                     <div class="input-group">

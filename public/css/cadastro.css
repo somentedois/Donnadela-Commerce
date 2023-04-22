@@ -113,3 +113,7 @@ form .input-group button{
     color: white;
 }
 
+form .input-group span {
+    visibility: hidden;
+}
+
