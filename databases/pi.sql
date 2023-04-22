@@ -10,17 +10,16 @@ CREATE TABLE cliente (
   PRIMARY KEY (id)
 );
 
-CREATE TABLE `enderecos` (
+CREATE TABLE enderecos (
   id int NOT NULL AUTO_INCREMENT,
   cliente_id int NOT NULL,
   endereco varchar(255) NOT NULL,
   numero varchar(255) NOT NULL,
   bairro varchar(255) NOT NULL,
-  complemento DEFAULT NULL,
   estado varchar(255) NOT NULL,
   cidade char(2) NOT NULL,
   PRIMARY KEY (id),
-  FOREIGN KEY (usuario_id) REFERENCES usuario(id)
+  FOREIGN KEY (cliente_id) REFERENCES cliente(id)
 );
 
 CREATE TABLE categoria (
@@ -69,4 +68,4 @@ INSERT INTO categorias (nome) VAlUES
 ('Sombrancelha'),
 ('Umbigo'),
 ('Mamilo'),
-('Íntimos'),
+('Íntimos');
