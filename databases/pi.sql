@@ -35,20 +35,6 @@ CREATE TABLE forma_de_pagamento (
   PRIMARY KEY (id)
   );
 
-CREATE TABLE pedido (
-  id int NOT NULL AUTO_INCREMENT,
-  cliente_id int NOT NULL,
-  data datetime NOT NULL,
-  forma_pagamento_id int NOT NULL,
-  total decimal(10,2) NOT NULL,
-  endereco_id int NOT NULL,
-  obs varchar(255) DEFAULT NULL,
-  PRIMARY KEY (id),
-  FOREIGN KEY (endereco_id) REFERENCES enderecos (id),
-  FOREIGN KEY (cliente_id) REFERENCES cliente (id),
-  FOREIGN KEY (forma_pagamento_id) REFERENCES forma_de_pagamento (id)
-);
-
 CREATE TABLE produto (
   id int NOT NULL AUTO_INCREMENT,
   nome varchar(45) NOT NULL,
@@ -61,7 +47,22 @@ CREATE TABLE produto (
   FOREIGN KEY (categoria_id) REFERENCES categoria (id)
 );
 
-INSERT INTO categorias (nome) VAlUES
+CREATE TABLE pedido (
+  id int NOT NULL AUTO_INCREMENT,
+  cliente_id int NOT NULL,
+  data datetime NOT NULL,
+  forma_pagamento_id int NOT NULL,
+  total decimal(10,2) NOT NULL,
+  endereco_id int NOT NULL,
+  obs varchar(255) DEFAULT NULL,
+  PRIMARY KEY (id),
+  FOREIGN KEY (endereco_id) REFERENCES enderecos (id),
+  FOREIGN KEY (cliente_id) REFERENCES cliente (id),
+  FOREIGN KEY (forma_pagamento_id) REFERENCES forma_de_pagamento (id),
+);
+
+
+INSERT INTO categorias (nome) Values
 ('Orelha'),
 ('Boca'),
 ('Nariz'),
@@ -69,3 +70,40 @@ INSERT INTO categorias (nome) VAlUES
 ('Umbigo'),
 ('Mamilo'),
 ('Íntimos');
+
+INSERT INTO cliente(nome, email, senha) Values 
+('Matheus', 'matheus@dh.com.br', '123456'),
+('Wellyngton', 'wellynton@dh.com.br', '545846'),
+('Pietra', 'pietra@dh.com.br', 'asihduhdwu'),
+('Sergio', 'sergio@dh.com.br', '123456');
+
+INSERT INTO endereco(cliente_id, endereco, numero, bairro, cidade, estado) Values
+(1, 'Rua das Acasias', '98', 'Jardim Primavera', 'Quatá', 'SP'),
+(1, 'Rua das Azaleias', '115', 'Jardim Primavera', 'Rancharia', 'SP'),
+(2, 'Rua Reginaldo Rossi', '478', 'Bairro dos Cantor', 'Osasco', 'SP'),
+(3, 'Rua Vanusa', '176', 'Jardim Cantores do Hino', 'Santos', 'SP'),
+(4, 'Rua du Curintia', '98', 'Jardim Perigoso', 'São Paulo', 'SP');
+
+INSERT INTO forma_de_pagamento(nome) Values
+('Dinhero'),
+('Cartão de crédito'),
+('Cartão de débito'),
+('Pix'),
+('Boleto');
+
+INSERT INTO produto (nome, preco, img, destaque, score, categoria_id) Values
+('Piercing Orelha Direita', 87.0, '/img/foto2.jpg', 1, 28, 1),
+('Piercing Orelha Esquerda', 62.0, '/img/foto2.jpg', 0, 16, 0),
+('Piercing Nariz', 13.0, '/img/foto2.jpg', 1, 25, 3),
+('Piercing Lábio', 891.0, '/img/foto2.jpg', 0, 13, 2),
+
+
+INSERT INTO pedido(cliente_id, data, forma_pagamento_id, total, endereco_id) Values
+(1, 2022-03-15 18:30:00, 1, 134.0, 1)
+(1, 2022-03-16 20:30:00, 2, 134.0, 2)
+(2, 2023-01-16 09:30:00, 3, 134.0, 1)
+(3, 2023-02-28 12:45:00, 4, 134.0, 1)
+
+
+
+
