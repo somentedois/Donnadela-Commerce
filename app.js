@@ -6,7 +6,10 @@ const router = require('./router');
 
 // 2 - Criar o servidor
 const servidor = express();
+
 servidor.set('view engine', 'ejs')
+
+servidor.use(express.urlencoded({ extended: false }));
 
 servidor.use(express.static(path.join(__dirname, 'public')))
 

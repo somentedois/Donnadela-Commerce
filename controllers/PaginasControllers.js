@@ -1,4 +1,5 @@
 const path = require('path');
+const produtosDaLoja = require('../databases/produtos.json');
 
 const PaginasController = {
 
@@ -51,7 +52,17 @@ const PaginasController = {
     },
 
     pesquisa: (req, res) => {
-        return res.render('pesquisa.ejs');
+        let trecho = req.query.busca;
+
+        let filtroProdutos = produtos => {
+            let produtoBuscado = produtos.nome.toLowerCase().includes(trecho.toLowerCase());
+            return produtoBuscado;
+        }
+        let produtosFiltrados = produtosDaLoja.filter(filtroProdutos)
+
+        return res.render('pesquisa.ejs', {produtosDaLoja: produtosFiltrados});
+
+
     },
 
     formEditProduto: (req, res) => {
