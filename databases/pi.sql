@@ -61,6 +61,14 @@ CREATE TABLE pedido (
   FOREIGN KEY (forma_pagamento_id) REFERENCES forma_de_pagamento (id),
 );
 
+CREATE TABLE pedidoxproduto (
+  id int NOT NULL AUTO_INCREMENT,
+  produto_id int NOT NULL,
+  pedido_id int NOT NULL,
+  FOREIGN KEY (produto_id) REFERENCES produto (id),
+  FOREIGN KEY (pedido_id) REFERENCES pedido (id),
+
+
 
 INSERT INTO categorias (nome) Values
 ('Orelha'),
