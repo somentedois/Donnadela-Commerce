@@ -1,6 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
-    const Pedido = sequelize.define(
-        'Pedido',
+    const Pedidos = sequelize.define(
+        'Pedidos',
         {
             id: {
                 type: DataTypes.INTEGER,
@@ -34,9 +34,9 @@ module.exports = (sequelize, DataTypes) => {
             }
         },
             {
-            tableName: 'pedido',
+            tableName: 'pedidos',
             timestamps: false
         }
     )
-    return Pedido;
+    return Pedidos;
 }

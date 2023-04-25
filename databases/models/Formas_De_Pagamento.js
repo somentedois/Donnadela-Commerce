@@ -1,6 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
     const Formas_De_Pagamento = sequelize.define(
-        'Formas de Pagamento',
+        'Formas_De_Pagamento',
         {
             id: {
                 type: DataTypes.INTEGER,
@@ -14,7 +14,7 @@ module.exports = (sequelize, DataTypes) => {
             }
         },
         {
-            tableName: 'forma_de_pagamento',
+            tableName: 'formas_de_pagamento',
             timestamps: false
         }
     )

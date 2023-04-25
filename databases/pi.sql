@@ -7,6 +7,8 @@ CREATE TABLE clientes (
   nome varchar(255) NOT NULL,
   email varchar(255) NOT NULL UNIQUE KEY,
   senha varchar(255) NOT NULL,
+  createdAt timestamp,
+  updatedAt timestamp,
   PRIMARY KEY (id)
 );
 
@@ -80,11 +82,11 @@ INSERT INTO categorias (nome) Values
 ('Mamilo'),
 ('Íntimos');
 
-INSERT INTO clientes(nome, email, senha) Values 
-('Matheus', 'matheus@dh.com.br', '123456'),
-('Wellyngton', 'wellynton@dh.com.br', '545846'),
-('Pietra', 'pietra@dh.com.br', 'asihduhdwu'),
-('Sergio', 'sergio@dh.com.br', '123456');
+INSERT INTO clientes(nome, email, senha, createdAt, updatedAt) Values 
+('Matheus', 'matheus@dh.com.br', '123456', now(), now()),
+('Wellyngton', 'wellynton@dh.com.br', '545846', now(), now()),
+('Pietra', 'pietra@dh.com.br', 'asihduhdwu', now(), now()),
+('Sergio', 'sergio@dh.com.br', '123456', now(), now());
 
 INSERT INTO enderecos(cliente_id, endereco, numero, bairro, cidade, estado) Values
 (1, 'Rua das Acasias', '98', 'Jardim Primavera', 'Quatá', 'SP'),
