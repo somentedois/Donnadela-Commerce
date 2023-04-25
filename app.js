@@ -9,6 +9,8 @@ const servidor = express();
 
 servidor.set('view engine', 'ejs')
 
+servidor.use(express.urlencoded({ extended: false }));
+
 servidor.use(express.static(path.join(__dirname, 'public')))
 
 servidor.use(router);

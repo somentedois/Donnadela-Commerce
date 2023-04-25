@@ -1,5 +1,6 @@
 const express = require('express');
 const PaginasController = require('./controllers/PaginasControllers');
+const ClientesControllers = require('./controllers/ClientesControllers');
 const router = express.Router();
 
 // Definir as rotas para o roteador
@@ -10,6 +11,8 @@ router.get('/carrinho', PaginasController.carrinho)
 router.get('/perfil-de-usuario', PaginasController.perfilUsuario);
 
 router.get('/cadastro', PaginasController.cadastro);
+
+router.post('/cadastro', ClientesControllers.store);
 
 router.get('/login', PaginasController.login);
 
