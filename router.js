@@ -11,6 +11,8 @@ router.get('/perfil-de-usuario', PaginasController.perfilUsuario);
 
 router.get('/cadastro', PaginasController.cadastro);
 
+router.post('/cadastro', PaginasController.cadastro);
+
 router.get('/login', PaginasController.login);
 
 router.get('/pagina-produtos', PaginasController.paginaProduto);
