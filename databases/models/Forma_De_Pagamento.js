@@ -18,4 +18,5 @@ module.exports = (sequelize, DataTypes) => {
             timestamps: false
         }
     )
+    return Formas_De_Pagamento;
 }

@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-    const Clientes = sequelize.define(
+    const Categorias = sequelize.define(
         'Categorias',
         {
             id: {
@@ -18,4 +18,5 @@ module.exports = (sequelize, DataTypes) => {
             timestamps: false
         }
     )
+    return Categorias;
 }
