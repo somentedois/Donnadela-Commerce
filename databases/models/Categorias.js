@@ -1,6 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
-    const Clientes = sequelize.define(
-        'Clientes',
+    const Categorias = sequelize.define(
+        'Categorias',
         {
             id: {
                 type: DataTypes.INTEGER,
@@ -11,22 +11,12 @@ module.exports = (sequelize, DataTypes) => {
             nome: {
                 type: DataTypes.STRING(255),
                 allowNull: false
-            },
-            email: {
-                type: DataTypes.STRING(255),
-                allowNull: false
-            },
-            senha: {
-                type: DataTypes.STRING(255),
-                allowNull: false
             }
         },
         {
-            },
-            {
-            tableName: 'clientes',
+            tableName: 'categorias',
             timestamps: false
         }
     )
-    return Clientes;
+    return Categorias;
 }

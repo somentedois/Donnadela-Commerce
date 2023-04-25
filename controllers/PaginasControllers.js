@@ -54,8 +54,8 @@ const PaginasController = {
     pesquisa: (req, res) => {
         let trecho = req.query.busca;
 
-        let filtroProdutos = produto => {
-            let produtoBuscado = produto.nome.toLowerCase().includes(trecho.toLowerCase());
+        let filtroProdutos = produtos => {
+            let produtoBuscado = produtos.nome.toLowerCase().includes(trecho.toLowerCase());
             return produtoBuscado;
         }
         let produtosFiltrados = produtosDaLoja.filter(filtroProdutos)
