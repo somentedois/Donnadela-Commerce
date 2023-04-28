@@ -1,7 +1,11 @@
 const produtoServices = require("../services/produtoServices");
+const fs = require('fs');
+const bcrypt = require('bcrypt');
+const { Produtos } = require('../databases/models');
+
 
 const AdmController = {
-    listarProdutos: (req, res)=>{
+    listarProdutos: async (req, res)=>{
     
     const produtos = produtoServices.carregarProdutos();
 
@@ -9,19 +13,26 @@ const AdmController = {
 
     },
 
-    criarProduto: (req, res)=>{
-        res.render('form-add-produto.ejs');
+    criarProduto: async (req, res)=>{
+        produto = await Produtos.findAll();
+        res.render('form-add-produto.ejs', {produtos});
     },
 
-    gravarProduto: (req,res)=>{
+    gravarProduto: async (req,res)=>{
+
+        let novoNome = req.body.nome.replace(' ', '-').toLowerCase() + '.jpg';
+        fs.renameSync(req.file.path, `public/img/${novoNome}`)
+
         let produto = {
             nome: req.body.nome,
+            ingredientes: req.body.ingredientes,
             preco: Number(req.body.preco),
-            img: "/img/no-image.png",
+            img: `/img/${novoNome}`,
             destaque: false,
             score: 0
         }
-        produtoServices.adicionarProduto(produto);
+
+        await produtoServices.adicionarProduto(produto);
 
         res.redirect('/adm/produtos');
 

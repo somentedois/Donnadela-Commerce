@@ -1,6 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
-    const Clientes = sequelize.define(
-        'Clientes',
+    const Produtos = sequelize.define(
+        'Produtos',
         {
             id: {
                 type: DataTypes.INTEGER,
@@ -8,24 +8,31 @@ module.exports = (sequelize, DataTypes) => {
                 autoIncrement: true,
                 allowNull: false
             },
+            categoria_id: {
+                type: DataTypes.INTEGER,
+                allowNull: false
+            },
             nome: {
                 type: DataTypes.STRING(255),
                 allowNull: false
             },
-            email: {
-                type: DataTypes.STRING(255),
+            preco:{
+                type: DataTypes.DECIMAL(10,2),
                 allowNull: false
             },
-            senha: {
-                type: DataTypes.STRING(255),
+            destaque:{
+                type: DataTypes.STRING(45),
                 allowNull: false
+            },
+            score: {
+                type: DataTypes.INTEGER,
+                allowNull: true
             }
         },
-
-        {
-            tableName: 'clientes',
+            {
+            tableName: 'produtos',
             timestamps: false
         }
     )
-    return Clientes;
+    return Produtos;
 }
