@@ -1,9 +1,10 @@
 // 1 - Importar o express
 const express = require('express');
 const path = require('path');
-
+const registraRequisicao = require('./middlewares/registraRequisicao');
 
 const router = require('./router');
+
 
 
 // 2 - Criar o servidor
@@ -14,6 +15,8 @@ servidor.set('view engine', 'ejs')
 servidor.use(express.urlencoded({ extended: false }));
 
 servidor.use(express.static(path.join(__dirname, 'public')))
+
+servidor.use(registraRequisicao)
 
 servidor.use(router);
 
