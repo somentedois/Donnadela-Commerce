@@ -2,8 +2,18 @@ const express = require('express');
 const PaginasController = require('./controllers/PaginasControllers');
 const ClientesControllers = require('./controllers/ClientesControllers');
 const router = express.Router();
+const verificaSeLogado = require('./middlewares/verificaSeLogado');
+const AdmController = require('./controllers/AdmControllers');
+
 
 // Definir as rotas para o roteador
+
+router.get('/adm/form-add-produto', AdmController)
+
+router.get('/adm/form-edit-produto', AdmController)
+
+// Criar rotas para editar, deletar e upar produto
+
 router.get('/', PaginasController.index)
 
 router.get('/carrinho', PaginasController.carrinho)
@@ -34,9 +44,11 @@ router.get('/pesquisa', PaginasController.pesquisa);
 
 router.get('/lista-produto', PaginasController.listaProduto);
 
-router.get('/form-add-produto', PaginasController.adicionarProduto);
+//router.get('/form-add-produto', PaginasController.adicionarProduto);
 
-router.get('/form-edit-produto.ejs', PaginasController.formEditProduto);
+//router.get('/form-edit-produto', PaginasController.formEditProduto);
+
+
 
 
 // Exportar o roteador
