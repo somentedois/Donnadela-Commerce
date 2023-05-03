@@ -8,13 +8,24 @@ const AdmController = require('./controllers/AdmControllers');
 
 // Definir as rotas para o roteador
 
-router.get('/adm/form-add-produto', AdmController)
+// router.get('/adm/form-add-produto', AdmController)
 
-router.get('/adm/form-edit-produto', AdmController)
+// router.get('/adm/form-edit-produto', AdmController)
 
 // Criar rotas para editar, deletar e upar produto
 
-router.get('/', PaginasController.index)
+router.get('/', PaginasController.index);
+
+router.get('/', function(req, res) {
+    // Verifica se o usuário está conectado
+    if (req.session.userId) {
+    // Renderiza a página do perfil do usuário
+      res.render('perfil', PaginasController.login, { userId: req.session.userId });
+    } else {
+    // Redireciona o usuário para a página de login
+      res.redirect('/login', PaginasController.login);
+    }
+});
 
 router.get('/carrinho', PaginasController.carrinho)
 

@@ -10,7 +10,10 @@ const ClientesControllers = {
             nome: req.body.nome,
             email: req.body.email,
             senha: senhaCrypto
-         });
+        });
+        // Cria uma propriedade na sessão para armazenar o ID do usuário cadastrado
+        req.session.userId = clienteCriado.id;
+
         return res.send(clienteCriado);
     }
 }
