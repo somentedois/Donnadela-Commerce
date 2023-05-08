@@ -24,7 +24,7 @@ module.exports = (sequelize, DataTypes) => {
 
         {
             tableName: 'clientes',
-            timestamps: false
+            timestamps: true
         }
     )
     return Clientes;

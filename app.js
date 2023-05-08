@@ -4,7 +4,7 @@ const path = require('path');
 const registraRequisicao = require('./middlewares/registraRequisicao');
 const session = require('express-session');
 const router = require('./router');
-
+const configUserLogado = require('./middlewares/configUserLogado');
 
 
 // 2 - Criar o servidor
@@ -24,6 +24,8 @@ servidor.use(express.urlencoded({ extended: false }));
 servidor.use(express.static(path.join(__dirname, 'public')))
 
 servidor.use(registraRequisicao)
+
+servidor.use(configUserLogado)
 
 
 servidor.use(function(req, res, next) {

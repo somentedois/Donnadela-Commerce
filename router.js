@@ -16,7 +16,7 @@ router.get('/adm/form-edit-produto', AdmController.editarProduto)
 
 router.get('/', PaginasController.index);
 
-router.get('/', function(req, res) {
+/*router.get('/', function(req, res) {
     // Verifica se o usuário está conectado
     if (req.session.userId) {
     // Renderiza a página do perfil do usuário
@@ -25,7 +25,7 @@ router.get('/', function(req, res) {
     // Redireciona o usuário para a página de login
       res.redirect('/login', PaginasController.login);
     }
-});
+});*/
 
 router.get('/carrinho', PaginasController.carrinho)
 
@@ -36,6 +36,8 @@ router.get('/cadastro', PaginasController.cadastro);
 router.post('/cadastro', ClientesControllers.store);
 
 router.get('/login', PaginasController.login);
+
+router.post('/login', ClientesControllers.userLogado);
 
 router.get('/pagina-produtos', PaginasController.paginaProduto);
 

@@ -15,6 +15,9 @@
     <main>
         <section class="box">
             <article id="produto-buscado">
+                <% produtos.array.forEach(produto => { %>
+                    
+                <%}) %>;
                 <img src="<%= produto.img %>" alt="<%= produto.nome %>">
                 <h4><%= produto.nome %></h4>
                 <h2><%= produto.preco.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'}) %></h2>
