@@ -7,15 +7,15 @@ const { Produtos } = require('../databases/models');
 const AdmController = {
     listarProdutos: async (req, res)=>{
     
-    const produtos = produtoServices.carregarProdutos();
+    const produtos = await produtoServices.carregarProdutos();
 
-    res.render('lista-produtos.ejs', {produtos})
+    return res.render('lista-produtos.ejs', {produtos})
 
     },
 
     criarProduto: async (req, res)=>{
         produto = await Produtos.findAll();
-        res.render('form-add-produto.ejs', {produtos});
+       return res.render('form-add-produto.ejs', {produtos});
     },
 
     gravarProduto: async (req,res)=>{
@@ -34,14 +34,14 @@ const AdmController = {
 
         await produtoServices.adicionarProduto(produto);
 
-        res.redirect('/adm/produtos');
+       return res.redirect('/adm/produtos');
 
     },
 
-    editarProduto: (req, res)=>{
+    editarProduto: async (req, res)=>{
         let id = req.params.idDoProduto;
 
-        const produto = produtoServices.carregarProdutos(id);
+        const produto = await produtoServices.carregarProdutos(id);
 
         // mandar a pizza ser exibida...
         return res.render('form-edit.produto.ejs', {produto});

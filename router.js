@@ -8,9 +8,9 @@ const AdmController = require('./controllers/AdmControllers');
 
 // Definir as rotas para o roteador
 
-router.get('/adm/form-add-produto', AdmController)
+router.get('/adm/form-add-produto', AdmController.gravarProduto)
 
-router.get('/adm/form-edit-produto', AdmController)
+router.get('/adm/form-edit-produto', AdmController.editarProduto)
 
 // Criar rotas para editar, deletar e upar produto
 
@@ -44,9 +44,9 @@ router.get('/pesquisa', PaginasController.pesquisa);
 
 router.get('/lista-produto', PaginasController.listaProduto);
 
-//router.get('/form-add-produto', PaginasController.adicionarProduto);
+router.get('/form-add-produto', PaginasController.adicionarProduto);
 
-//router.get('/form-edit-produto', PaginasController.formEditProduto);
+router.get('/form-edit-produto', PaginasController.formEditProduto);
 
 
 
