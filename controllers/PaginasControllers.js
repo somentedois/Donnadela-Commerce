@@ -60,7 +60,7 @@ const PaginasController = {
         }
         let produtosFiltrados = produtosDaLoja.filter(filtroProdutos)
 
-        return res.render('pesquisa.ejs', {produtosDaLoja: produtosFiltrados});
+        return res.render('pesquisa.ejs', {produtos: produtosFiltrados});
 
 
     },
