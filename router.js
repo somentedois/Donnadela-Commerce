@@ -12,6 +12,7 @@ router.get('/adm/form-add-produto', AdmController.gravarProduto)
 
 router.get('/adm/form-edit-produto', AdmController.editarProduto)
 
+
 // Criar rotas para editar, deletar e upar produto
 
 router.get('/', PaginasController.index);
