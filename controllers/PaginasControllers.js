@@ -45,12 +45,31 @@ const PaginasController = {
         const usuario = await Clientes.findByPk(id, {
             include: 'enderecos'
         })
-        console.log(usuario);
         return res.render('perfil-de-usuario.ejs', {usuario});
     },
 
-    editarPerfil: (req, res) => {
-        return res.render('editar-perfil.ejs');
+    editarPerfil: async (req, res) => {
+        const {id} = req.params;
+        const usuario = await Clientes.findByPk(id)
+        return res.render('editar-perfil.ejs', {usuario});
+    },
+
+    gravarPerfil: async (req, res) => {
+        const {id} = req.params;
+        const cliente = await Clientes.update({
+            nome: req.body.nome,
+            email: req.body.email
+        }, {
+            where: {
+                id
+            },
+            returning: true
+        })
+        console.log(cliente)
+        req.session.regenerate(function (err) {
+            req.session.user = cliente;
+            return res.redirect(`/perfil-de-usuario/${id}`);
+        });
     },
 
     editarEndereco: (req, res) => {

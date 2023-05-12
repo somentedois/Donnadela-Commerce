@@ -52,6 +52,8 @@ router.get('/confirmacao-compra', PaginasController.confirmacaoCompra);
 
 router.get('/editar-perfil/:id', PaginasController.editarPerfil);
 
+router.post('/editar-perfil/:id', PaginasController.gravarPerfil);
+
 router.get('/editar-endereco/:id', PaginasController.editarEndereco);
 
 router.post('/editar-endereco/:id', EnderecosControllers.criarEndereco);
