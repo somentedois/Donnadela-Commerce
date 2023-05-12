@@ -12,7 +12,10 @@ const ClientesControllers = {
             senha: senhaCrypto
         });
         // Cria uma propriedade na sessão para armazenar o ID do usuário cadastrado
-        req.session.user = clienteCriado;
+        req.session.user = {
+            id: clienteCriado.id,
+            nome: clienteCriado.nome
+        };
 
         return res.redirect('/');
     },
@@ -31,7 +34,10 @@ const ClientesControllers = {
         if(!senhaOk){
             return res.redirect('/login')
         }
-        req.session.user = logUser;
+        req.session.user = {
+            id: logUser.id,
+            nome: logUser.nome
+        };
 
         return res.redirect('/');
     }

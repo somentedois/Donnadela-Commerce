@@ -67,7 +67,10 @@ const PaginasController = {
         })
         console.log(cliente)
         req.session.regenerate(function (err) {
-            req.session.user = cliente;
+            req.session.user = {
+                id: parseInt(id),
+                nome: req.body.nome,
+            };
             return res.redirect(`/perfil-de-usuario/${id}`);
         });
     },
