@@ -4,6 +4,7 @@ const ClientesControllers = require('./controllers/ClientesControllers');
 const router = express.Router();
 const verificaSeLogado = require('./middlewares/verificaSeLogado');
 const AdmController = require('./controllers/AdmControllers');
+const EnderecosControllers = require('./controllers/EnderecosControllers');
 
 
 // Definir as rotas para o roteador
@@ -51,7 +52,9 @@ router.get('/confirmacao-compra', PaginasController.confirmacaoCompra);
 
 router.get('/editar-perfil', PaginasController.editarPerfil);
 
-router.get('/editar-endereco', PaginasController.editarEndereco);
+router.get('/editar-endereco/:id', PaginasController.editarEndereco);
+
+router.post('/editar-endereco/:id', EnderecosControllers.criarEndereco);
 
 router.get('/pesquisa', PaginasController.pesquisa);
 

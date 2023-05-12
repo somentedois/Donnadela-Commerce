@@ -15,6 +15,7 @@ CREATE TABLE clientes (
 CREATE TABLE enderecos (
   id int NOT NULL AUTO_INCREMENT,
   cliente_id int NOT NULL,
+  cep varchar(10) NOT NULL,
   endereco varchar(255) NOT NULL,
   numero varchar(255) NOT NULL,
   bairro varchar(255) NOT NULL,

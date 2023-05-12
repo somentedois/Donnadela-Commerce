@@ -1,87 +1,85 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <title>Editar Endereço</title>
-    <%-include('parts/head.ejs', {css: ['style.css', 'editar-endereco.css', 'editar-perfil.css', 'perfil-de-usuario.css', 'nav-principal.css']}) %>
+    <%-include('parts/head.ejs', {css: ['style.css', 'editar-endereco.css' , 'editar-perfil.css' , 'perfil-de-usuario.css' , 'nav-principal.css' ]}) %>
 
-    
 </head>
+
 <body>
     <%-include('parts/header.ejs') %>
-    <main class="edit-address-page">
-        <section class="my-addresses">
-            <h3>Endereços</h3>
-            <hr id="line-top">
-            <div id="addresses"> 
-                <p>Rua das Flores, 200. Santo André-SP. CEP 87489-020</p> 
-                <a href="#" id="signal">-</a>
+        <main class="edit-address-page">
+            <section class="my-addresses">
+                <h3>Endereços</h3>
+                <hr id="line-top">
+                <div id="addresses">
+                    <p>Rua das Flores, 200. Santo André-SP. CEP 87489-020</p>
+                    <a href="#" id="signal">-</a>
+                </div>
+                <hr id="line">
+                <div id="addresses">
+                    <p>Rua das Mercedes, 1800. Santo André-SP. CEP 85489-414</p>
+                    <a href="#" id="signal">+</a>
+                </div>
+                <hr id="line">
+                <div id="addresses">
+                    <p>Av. das Cores, 200. Santo André-SP. CEP 85459-878</p>
+                    <a href="#" id="signal">+</a>
+                </div>
+                <hr id="line">
+            </section>
+
+            <div class="box">
+                <div class="form-box-edit-address">
+                    <h2>Alterar/Adicionar Endereço</h2>
+                    <form action="#">
+                        <div id="input-group">
+                            <label for="cep">CEP</label>
+                            <input type="text" name="cep" id="cep" placeholder="Digite o CEP"
+                                pattern="^[0-9]{5}-[0-9]{3}$" required>
+                        </div>
+
+                        <div class="input-group w75" id="input-group">
+                            <label for="endereco">Endereço</label>
+                            <input type="text" name="endereco" id="endereco" placeholder="" readonly>
+                        </div>
+
+                        <div class="input-group w25" id="input-group">
+                            <label for="numero">Número</label>
+                            <input type="number" name="numero" id="numero" placeholder="" required>
+                        </div>
+
+                        <div class="input-group w65" id="input-group">
+                            <label for="bairro">Bairro</label>
+                            <input type="text" name="bairro" id="bairro" placeholder="" readonly>
+                        </div>
+
+                        <div class="input-group w35" id="input-group">
+                            <label for="complemento">Complemento</label>
+                            <input type="text" id="complemento" placeholder="">
+                        </div>
+
+                        <div class="input-group w25" id="input-group">
+                            <label for="estado">Estado</label>
+                            <input name="text" name="estado" id="estado" placeholder="" readonly>
+                        </div>
+
+                        <div class="input-group w75" id="input-group">
+                            <label for="cidade">Cidade</label>
+                            <input type="cidade" name="cidade" id="cidade" placeholder="" readonly>
+                        </div>
+
+                        <div id="input-group">
+                            <button>Salvar</button>
+                        </div>
+                    </form>
+                </div>
             </div>
-            <hr id="line">
-            <div id="addresses"> 
-                <p>Rua das Mercedes, 1800. Santo André-SP. CEP 85489-414</p> 
-                <a href="#" id="signal">+</a>
-            </div> 
-            <hr id="line">
-            <div id="addresses"> 
-                <p>Av. das Cores, 200. Santo André-SP. CEP 85459-878</p> 
-                <a href="#" id="signal">+</a>
-            </div>
-            <hr id="line">
-        </section>
-
-        <div class="box">
-            <div class="form-box-edit-address">
-                <h2>Alterar/Adicionar Endereço</h2>
-                <form action="#">
-                    <div  id="input-group">
-                        <label for="nome">Nome</label>
-                        <input type="nome" id="nome" placeholder="Nome do Destinatário" required>
-                    </div>
-                    
-                    <div id="input-group">
-                        <label for="cep">CEP</label>
-                        <input type="text" id="cep" placeholder="Digite o CEP" pattern="^[0-9]{5}-[0-9]{3}$" required>
-                    </div>
-                    
-                    <div class="input-group w75" id="input-group">
-                        <label for="endereco">Endereço</label>
-                        <input type="text" id="endereco" placeholder="" readonly>
-                    </div>
-    
-                    <div class="input-group w25" id="input-group">
-                        <label for="numero">Número</label>
-                        <input type="number" id="numero" placeholder="" required>
-                    </div>
-    
-                    <div class="input-group w65" id="input-group">
-                        <label for="bairro">Bairro</label>
-                        <input type="text" id="bairro" placeholder="" readonly>
-                    </div>
-
-                    <div class="input-group w35" id="input-group">
-                        <label for="complemento">Complemento</label>
-                        <input type="text" id="complemento" placeholder="">
-                    </div>
-
-                    <div class="input-group w25" id="input-group">
-                        <label for="estado">Estado</label>
-                        <input name="text" id="estado" placeholder="" readonly>
-                    </div>
-
-                    <div class="input-group w75" id="input-group">
-                        <label for="cidade">Cidade</label>
-                        <input type="cidade" id="cidade" placeholder="" readonly>
-                    </div>
-    
-                    <div id="input-group">
-                        <button>Salvar</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </main>
-    <%-include('parts/footer.ejs') %>
+        </main>
+        <%-include('parts/footer.ejs') %>
 
 </body>
 <script src="js/checkout-endereco.js" defer></script>
+
 </html>
