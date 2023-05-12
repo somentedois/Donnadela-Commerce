@@ -65,7 +65,6 @@ const PaginasController = {
             },
             returning: true
         })
-        console.log(cliente)
         req.session.regenerate(function (err) {
             req.session.user = {
                 id: parseInt(id),

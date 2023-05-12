@@ -66,6 +66,8 @@ router.get('/form-add-produto', PaginasController.adicionarProduto);
 
 router.get('/form-edit-produto', PaginasController.formEditProduto);
 
+router.get('/logout', ClientesControllers.logout);
+
 
 
 
