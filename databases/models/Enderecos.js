@@ -13,6 +13,10 @@ module.exports = (sequelize, DataTypes) => {
                 type: DataTypes.INTEGER,
                 allowNull: false
             },
+            cep: {
+                type: DataTypes.STRING(10),
+                allowNull: false
+            },
             endereco: {
                 type: DataTypes.STRING(255),
                 allowNull: false

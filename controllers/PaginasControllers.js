@@ -1,5 +1,6 @@
 const path = require('path');
 const produtosDaLoja = require('../databases/produtos.json');
+const { Clientes } = require('../databases/models');
 
 const PaginasController = {
 
@@ -39,12 +40,38 @@ const PaginasController = {
         return res.render('confirmacao-compra.ejs');
     },
 
-    perfilUsuario: (req, res) => {
-        return res.render('perfil-de-usuario.ejs');
+    perfilUsuario: async (req, res) => {
+        const {id} = req.params;
+        const usuario = await Clientes.findByPk(id, {
+            include: 'enderecos'
+        })
+        return res.render('perfil-de-usuario.ejs', {usuario});
     },
 
-    editarPerfil: (req, res) => {
-        return res.render('editar-perfil.ejs');
+    editarPerfil: async (req, res) => {
+        const {id} = req.params;
+        const usuario = await Clientes.findByPk(id)
+        return res.render('editar-perfil.ejs', {usuario});
+    },
+
+    gravarPerfil: async (req, res) => {
+        const {id} = req.params;
+        const cliente = await Clientes.update({
+            nome: req.body.nome,
+            email: req.body.email
+        }, {
+            where: {
+                id
+            },
+            returning: true
+        })
+        req.session.regenerate(function (err) {
+            req.session.user = {
+                id: parseInt(id),
+                nome: req.body.nome,
+            };
+            return res.redirect(`/perfil-de-usuario/${id}`);
+        });
     },
 
     editarEndereco: (req, res) => {

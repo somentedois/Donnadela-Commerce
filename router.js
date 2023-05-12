@@ -4,6 +4,7 @@ const ClientesControllers = require('./controllers/ClientesControllers');
 const router = express.Router();
 const verificaSeLogado = require('./middlewares/verificaSeLogado');
 const AdmController = require('./controllers/AdmControllers');
+const EnderecosControllers = require('./controllers/EnderecosControllers');
 
 
 // Definir as rotas para o roteador
@@ -30,7 +31,7 @@ router.get('/', PaginasController.index);
 
 router.get('/carrinho', PaginasController.carrinho)
 
-router.get('/perfil-de-usuario', PaginasController.perfilUsuario);
+router.get('/perfil-de-usuario/:id', PaginasController.perfilUsuario);
 
 router.get('/cadastro', PaginasController.cadastro);
 
@@ -50,9 +51,13 @@ router.get('/finalizar-pagamento', PaginasController.finalizarPagamento);
 
 router.get('/confirmacao-compra', PaginasController.confirmacaoCompra);
 
-router.get('/editar-perfil', PaginasController.editarPerfil);
+router.get('/editar-perfil/:id', PaginasController.editarPerfil);
 
-router.get('/editar-endereco', PaginasController.editarEndereco);
+router.post('/editar-perfil/:id', PaginasController.gravarPerfil);
+
+router.get('/editar-endereco/:id', PaginasController.editarEndereco);
+
+router.post('/editar-endereco/:id', EnderecosControllers.criarEndereco);
 
 router.get('/pesquisa', PaginasController.pesquisa);
 
@@ -61,6 +66,8 @@ router.get('/lista-produto', PaginasController.listaProduto);
 router.get('/form-add-produto', PaginasController.adicionarProduto);
 
 router.get('/form-edit-produto', PaginasController.formEditProduto);
+
+router.get('/logout', ClientesControllers.logout);
 
 
 
