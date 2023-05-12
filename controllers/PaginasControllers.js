@@ -1,5 +1,6 @@
 const path = require('path');
 const produtosDaLoja = require('../databases/produtos.json');
+const { Clientes } = require('../databases/models');
 
 const PaginasController = {
 
@@ -39,8 +40,13 @@ const PaginasController = {
         return res.render('confirmacao-compra.ejs');
     },
 
-    perfilUsuario: (req, res) => {
-        return res.render('perfil-de-usuario.ejs');
+    perfilUsuario: async (req, res) => {
+        const {id} = req.params;
+        const usuario = await Clientes.findByPk(id, {
+            include: 'enderecos'
+        })
+        console.log(usuario);
+        return res.render('perfil-de-usuario.ejs', {usuario});
     },
 
     editarPerfil: (req, res) => {

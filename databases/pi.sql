@@ -84,17 +84,17 @@ INSERT INTO categorias (nome) Values
 ('Íntimos');
 
 INSERT INTO clientes(nome, email, senha, createdAt, updatedAt) Values 
-('Matheus', 'matheus@dh.com.br', '123456', now(), now()),
-('Wellyngton', 'wellynton@dh.com.br', '545846', now(), now()),
-('Pietra', 'pietra@dh.com.br', 'asihduhdwu', now(), now()),
-('Sergio', 'sergio@dh.com.br', '123456', now(), now());
+('Matheus', 'matheus@dh.com.br', '$2b$10$EKoJV06Vn45wdgORnJGQVOkQd.7h3SnI0AByaDo3LH/9QuQosIvRa', now(), now()),
+('Wellyngton', 'wellynton@dh.com.br', '$2b$10$EKoJV06Vn45wdgORnJGQVOkQd.7h3SnI0AByaDo3LH/9QuQosIvRa', now(), now()),
+('Pietra', 'pietra@dh.com.br', '$2b$10$EKoJV06Vn45wdgORnJGQVOkQd.7h3SnI0AByaDo3LH/9QuQosIvRa', now(), now()),
+('Sergio', 'sergio@dh.com.br', '$2b$10$EKoJV06Vn45wdgORnJGQVOkQd.7h3SnI0AByaDo3LH/9QuQosIvRa', now(), now());
 
-INSERT INTO enderecos(cliente_id, endereco, numero, bairro, cidade, estado) Values
-(1, 'Rua das Acasias', '98', 'Jardim Primavera', 'Quatá', 'SP'),
-(1, 'Rua das Azaleias', '115', 'Jardim Primavera', 'Rancharia', 'SP'),
-(2, 'Rua Reginaldo Rossi', '478', 'Bairro dos Cantor', 'Osasco', 'SP'),
-(3, 'Rua Vanusa', '176', 'Jardim Cantores do Hino', 'Santos', 'SP'),
-(4, 'Rua du Curintia', '98', 'Jardim Perigoso', 'São Paulo', 'SP');
+INSERT INTO enderecos(cliente_id, cep, endereco, numero, bairro, cidade, estado) Values
+(1, "19780-000",'Rua das Acasias', '98', 'Jardim Primavera', 'Quatá', 'SP'),
+(1, "19780-000",'Rua das Azaleias', '115', 'Jardim Primavera', 'Rancharia', 'SP'),
+(2, "19780-000",'Rua Reginaldo Rossi', '478', 'Bairro dos Cantor', 'Osasco', 'SP'),
+(3, "19780-000",'Rua Vanusa', '176', 'Jardim Cantores do Hino', 'Santos', 'SP'),
+(4, "19780-000",'Rua du Curintia', '98', 'Jardim Perigoso', 'São Paulo', 'SP');
 
 INSERT INTO formas_de_pagamento(nome) Values
 ('Dinhero'),

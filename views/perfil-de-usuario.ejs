@@ -14,12 +14,12 @@
         <section class="profile">
             <img src="img/perfil-default.jpg" alt="">
             <article class="client-info">
-                <h3>Ingrid dos Santos</h3>
-                <p>E-mail: ingrid@dossantos.com</p>
+                <h3><%= usuario.nome %></h3>
+                <p>E-mail: <%= usuario.email %></p>
                 <p>Cliente desde abril de 2022</p>
             </article>
             <div class="links-profile">
-                <a href="editar-perfil">Editar</a>
+                <a href="/editar-perfil/<%= usuario.id %>">Editar</a>
             </div>
         </section>
         <hr class="line1">
@@ -42,23 +42,22 @@
             <section class="address">
                 <h3>Endereços</h3>
                 <hr id="line-top">
-                <div id="addresses"> 
-                    <p>Rua das Flores, 200. Santo André-SP. CEP 87489-020</p> 
-                    <a href="#" id="signal">-</a>
-                </div>
-                <hr id="line">
-                <div id="addresses"> 
-                    <p>Rua das Mercedes, 1800. Santo André-SP. CEP 85489-414</p> 
-                    <a href="#" id="signal">+</a>
-                </div> 
-                <hr id="line">
-                <div id="addresses"> 
-                    <p>Av. das Cores, 200. Santo André-SP. CEP 85459-878</p> 
-                    <a href="#" id="signal">+</a>
-                </div>
-                <hr id="line">
+                <% if (usuario.enderecos.length > 0 ){  %>
+                    
+                    <% usuario.enderecos.forEach(item => { %>
+                        <div id="addresses"> 
+                            <p><%= `${item.endereco}, ${item.numero} - ${item.bairro} - ${item.cidade} - ${item.estado} - ${item.cep}` %></p> 
+                            <a href="#" id="signal">-</a>
+                        </div>
+                        <hr id="line">
+                        <% }) %>
+                    <% }else{ %>
+                        <div id="addresses"> 
+                            <p>Nenhum endereço cadastrado</p> 
+                        </div>
+                    <% } %>
                 <div class="add-address">
-                    <a href="editar-endereco">Adicionar Endereço</a>
+                    <a href="/editar-endereco/<%= usuario.id %>">Adicionar Endereço</a>
                 </div>
             </section>
         </div>

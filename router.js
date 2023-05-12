@@ -30,7 +30,7 @@ router.get('/', PaginasController.index);
 
 router.get('/carrinho', PaginasController.carrinho)
 
-router.get('/perfil-de-usuario', PaginasController.perfilUsuario);
+router.get('/perfil-de-usuario/:id', PaginasController.perfilUsuario);
 
 router.get('/cadastro', PaginasController.cadastro);
 
@@ -50,7 +50,7 @@ router.get('/finalizar-pagamento', PaginasController.finalizarPagamento);
 
 router.get('/confirmacao-compra', PaginasController.confirmacaoCompra);
 
-router.get('/editar-perfil', PaginasController.editarPerfil);
+router.get('/editar-perfil/:id', PaginasController.editarPerfil);
 
 router.get('/editar-endereco/:id', PaginasController.editarEndereco);
 

@@ -1,10 +1,6 @@
 const configUserLogado = (req, res, next) => {
-    if (req.session.user){
-        res.locals.user = req.session.user
-    }else{
-        res.locals.user = {}
-    }
-    next ()
+    res.locals.user = req.session.user;
+    next();
 }
 
-module.exports = configUserLogado
+module.exports = configUserLogado;
