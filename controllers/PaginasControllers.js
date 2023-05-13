@@ -74,10 +74,6 @@ const PaginasController = {
         });
     },
 
-    editarEndereco: (req, res) => {
-        return res.render('editar-endereco.ejs');
-    },
-
     pesquisa: (req, res) => {
         let trecho = req.query.busca;
 

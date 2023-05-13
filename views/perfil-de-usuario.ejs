@@ -43,7 +43,6 @@
                 <h3>Endereços</h3>
                 <hr id="line-top">
                 <% if (usuario.enderecos.length > 0 ){  %>
-                    
                     <% usuario.enderecos.forEach(item => { %>
                         <div id="addresses"> 
                             <p><%= `${item.endereco}, ${item.numero} - ${item.bairro} - ${item.cidade} - ${item.estado} - ${item.cep}` %></p> 
