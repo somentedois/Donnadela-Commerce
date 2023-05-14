@@ -1,6 +1,7 @@
 const path = require('path');
 const produtosDaLoja = require('../databases/produtos.json');
 const { Clientes } = require('../databases/models');
+const { Produtos } = require('../databases/models');
 
 const PaginasController = {
 
@@ -88,12 +89,16 @@ const PaginasController = {
 
     },
 
+    infoProdutos: async (req, res)=>{
+        const id = req.params.id;
+        const produto = await Produtos.findByPk(id)
+        return res.render('pagina-produtos.ejs', {produto});
+    },
+
     formEditProduto: (req, res) => {
         return res.render('form-edit-produto.ejs');
     },    
-    listaProduto: (req, res) => {
-        return res.render('lista-produto.ejs');
-    },
+    
     adicionarProduto: (req, res) => {
         return res.render('form-add-produto.ejs');
     }

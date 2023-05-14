@@ -44,6 +44,7 @@ CREATE TABLE produtos (
   preco varchar(45) NOT NULL,
   img varchar(45) NOT NULL,
   destaque varchar(45) NOT NULL,
+  descricao varchar (255) NOT NULL,
   score int NOT NULL,
   categoria_id int NOT NULL,
   PRIMARY KEY (id),
@@ -103,11 +104,11 @@ INSERT INTO formas_de_pagamento(nome) Values
 ('Pix'),
 ('Boleto');
 
-INSERT INTO produtos (nome, preco, img, destaque, score, categoria_id) Values
-('Piercing Orelha Direita', 87.0, '/img/foto2.jpg', 1, 28, 1),
-('Piercing Orelha Esquerda', 62.0, '/img/foto2.jpg', 0, 16, 1),
-('Piercing Nariz', 13.0, '/img/foto2.jpg', 1, 25, 3),
-('Piercing Lábio', 891.0, '/img/foto2.jpg', 0, 13, 2);
+INSERT INTO produtos (nome, preco, img, destaque, score, categoria_id, descricao) Values
+('Piercing Orelha Direita', 87.0, '/img/foto2.jpg', 1, 28, 1, "Lindo Piercing"),
+('Piercing Orelha Esquerda', 62.0, '/img/foto2.jpg', 0, 16, 1, "Lindo Piercing"),
+('Piercing Nariz', 13.0, '/img/foto2.jpg', 1, 25, 3, "Lindo Piercing"),
+('Piercing Lábio', 891.0, '/img/foto2.jpg', 0, 13, 2, "Lindo Piercing");
 
 
 INSERT INTO pedidos (cliente_id, data, forma_pagamento_id, total, endereco_id) Values
