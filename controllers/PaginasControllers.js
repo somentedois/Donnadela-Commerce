@@ -75,7 +75,7 @@ const PaginasController = {
         });
     },
 
-    pesquisa: (req, res) => {
+    /*pesquisa: async (req, res) => {
         let trecho = req.query.busca;
 
         let filtroProdutos = produtos => {
@@ -87,6 +87,14 @@ const PaginasController = {
         return res.render('pesquisa.ejs', {produtos: produtosFiltrados});
 
 
+    },*/
+
+    pesquisa: async (req, res) => {
+        let trecho = req.query.busca;
+        const produto = await Produtos.findAll({trecho
+            })
+
+        return res.render('pesquisa.ejs', {produto});
     },
 
     infoProdutos: async (req, res)=>{

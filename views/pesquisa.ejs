@@ -12,15 +12,13 @@
     <%-include('parts/head.ejs', {css: ['style.css', 'carrinho.css', 'nav-principal.css']}) %>
 
     <main>
-        <% for(const p of produtos) { %>
         <section class="box">
                 <article id="produto-buscado">
-                    <img src="/img/<%= p.img%>" alt="">
-                    <h4><%= p.nome %></h4>
-                    <h2><%= p.preco %></h2>
+                    <img src="<%= produto.img%>" alt="">
+                    <h4><%= produto.nome %></h4>
+                    <h2><%= produto.preco %></h2>
                 </article>
         </section>
-        <% } %>
     </main>
 
     <%-include('parts/footer.ejs') %>
