@@ -27,6 +27,14 @@ module.exports = (sequelize, DataTypes) => {
             score: {
                 type: DataTypes.INTEGER,
                 allowNull: true
+            },
+            img:{
+                type: DataTypes.STRING(255),
+                allowNull: false
+            },
+            descricao:{
+                type: DataTypes.STRING(255),
+                allowNull: false
             }
         },
             {

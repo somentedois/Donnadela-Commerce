@@ -52,6 +52,12 @@ form .address-number, .city-state {
     justify-content: space-between;
 }
 
+main #line {
+    width: 100%;
+    text-align: left;
+    border: 1px ridge rgb(39, 38, 38);
+}
+
 /* form #cidade, #endereco {
     width: 70%;
     height: 47px;

@@ -3,24 +3,21 @@
 
 <head>
     <title>Pesquisa de resultados</title>
-    <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet" />
     <%-include('parts/head.ejs', {css: ['style.css', 'pesquisa.css', 'nav-principal.css']}) %>
 </head>
 
 
 <body>
-    <%-include('parts/head.ejs', {css: ['style.css', 'carrinho.css', 'nav-principal.css']}) %>
+    <%-include('parts/header.ejs') %>
 
     <main>
-        <% for(const p of produtos) { %>
         <section class="box">
                 <article id="produto-buscado">
-                    <img src="/img/<%= p.img%>" alt="">
-                    <h4><%= p.nome %></h4>
-                    <h2><%= p.preco %></h2>
+                    <img src="<%= produto.img%>" alt="">
+                    <h4><%= produto.nome %></h4>
+                    <h2><%= produto.preco %></h2>
                 </article>
         </section>
-        <% } %>
     </main>
 
     <%-include('parts/footer.ejs') %>

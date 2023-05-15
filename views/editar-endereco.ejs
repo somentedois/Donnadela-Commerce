@@ -14,25 +14,26 @@
                 <h3>Endereços</h3>
                 <hr id="line-top">
                 <div id="addresses">
-                    <p>Rua das Flores, 200. Santo André-SP. CEP 87489-020</p>
-                    <a href="#" id="signal">-</a>
-                </div>
-                <hr id="line">
-                <div id="addresses">
-                    <p>Rua das Mercedes, 1800. Santo André-SP. CEP 85489-414</p>
-                    <a href="#" id="signal">+</a>
-                </div>
-                <hr id="line">
-                <div id="addresses">
-                    <p>Av. das Cores, 200. Santo André-SP. CEP 85459-878</p>
-                    <a href="#" id="signal">+</a>
+                    <% if (usuario.enderecos.length > 0 ){  %>
+                        <% usuario.enderecos.forEach(item => { %>
+                            <div id="addresses"> 
+                                <p><%= `${item.endereco}, ${item.numero} - ${item.bairro} - ${item.cidade} - ${item.estado} - ${item.cep}` %></p> 
+                                <a href="#" id="signal">-</a>
+                            </div>
+                            <hr id="line">
+                            <% }) %>
+                        <% }else{ %>
+                            <div id="addresses"> 
+                                <p>Nenhum endereço cadastrado</p> 
+                            </div>
+                        <% } %>
                 </div>
                 <hr id="line">
             </section>
 
             <div class="box">
                 <div class="form-box-edit-address">
-                    <h2>Alterar/Adicionar Endereço</h2>
+                    <h2>Adicionar Endereço</h2>
                     <form action="#">
                         <div id="input-group">
                             <label for="cep">CEP</label>
@@ -42,7 +43,7 @@
 
                         <div class="input-group w75" id="input-group">
                             <label for="endereco">Endereço</label>
-                            <input type="text" name="endereco" id="endereco" placeholder="" readonly>
+                            <input type="text" name="endereco" id="endereco" placeholder="" required>
                         </div>
 
                         <div class="input-group w25" id="input-group">
@@ -52,7 +53,7 @@
 
                         <div class="input-group w65" id="input-group">
                             <label for="bairro">Bairro</label>
-                            <input type="text" name="bairro" id="bairro" placeholder="" readonly>
+                            <input type="text" name="bairro" id="bairro" placeholder="" required>
                         </div>
 
                         <div class="input-group w35" id="input-group">
@@ -62,16 +63,16 @@
 
                         <div class="input-group w25" id="input-group">
                             <label for="estado">Estado</label>
-                            <input name="text" name="estado" id="estado" placeholder="" readonly>
+                            <input name="text" name="estado" id="estado" placeholder="" required>
                         </div>
 
                         <div class="input-group w75" id="input-group">
                             <label for="cidade">Cidade</label>
-                            <input type="cidade" name="cidade" id="cidade" placeholder="" readonly>
+                            <input type="cidade" name="cidade" id="cidade" placeholder="" required>
                         </div>
 
                         <div id="input-group">
-                            <button>Salvar</button>
+                            <button type="submit">Salvar</button>
                         </div>
                     </form>
                 </div>

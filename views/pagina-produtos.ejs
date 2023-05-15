@@ -13,19 +13,19 @@
                 <div class="left-side">
                     <div class="items">
                         <div class="select-image">
-                            <img src="img/piercing.jpg" alt="">
+                            <img src="<%= produto.img  %>" alt="">
                         </div>
                         <div class="thumbnails">
                             <div class="thumbnail">
-                                <img src="/img/piercing.jpg" alt="">
+                                <img src="<%= produto.img  %>" alt="">
                             </div>
                             
                             <div class="thumbnail">
-                                <img src="/img/piercing.jpg" alt="">
+                                <img src="<%= produto.img  %>" alt="">
                             </div>
 
                             <div class="thumbnail">
-                                <img src="/img/piercing.jpg" alt="">
+                                <img src="<%= produto.img  %>" alt="">
                             </div>
                             
                         </div>
@@ -36,9 +36,9 @@
                 <div class="right-side">
                     <div class="content">
                         <h6>DonaDella</h6>
-                        <h1>Produto Selecionado</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni magnam architecto alias minima. Nesciunt veritatis non ratione maiores eaque, placeat corporis ea recusandae dolorum deleniti, iure rerum quae! Sint, aut.</p>
-                        <span class="price">Preço: R$125,00</span>
+                        <h1><%= produto.nome %></h1>
+                        <p><%= produto.descricao %></p>
+                        <span class="price">R$<%= produto.preco %></span>
                         <div class="options">
                             <div class="amount">
                                 <div class="minus">
