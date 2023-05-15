@@ -26,22 +26,26 @@ function showProdutos(produtos){
     return produtosFiltrados;
 }*/
 
-async function filtrarProdutos(trechoBuscado){
-    const produtosFiltrados = await Produtos.findAll({trechoBuscado})
+async function filtrarProdutos(){
+    const produtosFiltrados = await Produtos.findAll({where: nome})
+
+    const trechoBuscado = campoDeBusca.value;
+
+    const produtoFiltrado = filtrarProdutos(produtosFiltrados, trechoBuscado);
     
-    showProdutos(produtosFiltrados);
+    showProdutos(produtoFiltrado);
 }
-/*function onCampoDeBuscaKeyup(){
+function onCampoDeBuscaKeyup(){
     
     // Capturar o trecho buscado pelo usuário
     const trechoBuscado = campoDeBusca.value;
 
     // Criar um array com as pizzas filtradas
-    const produtosFiltrados = filtrarProdutos(produtosDaLoja, trechoBuscado);
+    const produtosFiltrados = filtrarProdutos(produtosFiltrados, trechoBuscado);
 
     // Mostrar as pizzas filtradas
     showProdutos(produtosFiltrados);
-}*/
+}
 
 campoDeBusca.addEventListener('keyup', onCampoDeBuscaKeyup);
 

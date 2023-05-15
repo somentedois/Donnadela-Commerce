@@ -17,9 +17,8 @@
                 <article id="produto-buscado">
                     <img src="<%= produto.img %>" alt="<%= produto.nome %>">
                     <h4 name="nome"><%= produto.nome %></h4>
-                    <h2 name="preco"><%= produto.preco.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'}) %></h2>
+                    <h2 name="preco"><%= produto.preco%></h2>
                 </article>
-            <% } %>
         </section>
     </main>
 
